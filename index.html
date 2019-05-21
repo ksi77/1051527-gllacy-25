@@ -3,19 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <img class="logo" src="img/logo.png" width="200" height="200" alt="GllacyShop">
       <nav class="main-navigation">
         <ul>
-          <li><a>Каталог</a></li>
+          <li><a>Каталог</a>
+            <ul>
+              <li>Новинки</li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li>Щербеты</li>
+              <li>Фруктовый лед</li>
+              <li>Мелорин</li>
+            </ul>
+          </li>
+
           <li><a>Доставка и оплата</a></li>
           <li><a>О компании</a></li>
         </ul>
       </nav>
+      <div>Поиск</div>
       <nav class="user-navigation">
-        <div>Поиск</div>
         <a>Вход</a>
         <a>Корзина</a>
       </nav>
@@ -37,17 +47,17 @@
             <li class="slide1 dobble-item1">
               <h3>Крем-брюле и пломбир с малиновым джемом</h3>
               <img src="img/KB_Pl.png" alt="Крем-брюле и пломбир с малиновым джемом">
-              <a class="button button_purchase" href="1">Давайте оба</a><!--Исправить-->
+              <a class="button button_purchase" href="1">Давайте оба!</a><!--Исправить-->
             </li>
             <li class="slide2">
               <h3>Двойное предложение 2</h3>
               <img src="img/KB_Pl.png" alt="Двойное предложение 2"><!--Исправить!-->
-              <a class="button button_purchase" href="2">Давайте оба</a><!--Исправить-->
+              <a class="button button_purchase" href="2">Давайте оба!</a><!--Исправить-->
             </li>
             <li class="slide3">
               <h3>Двойное предложение 3</h3>
               <img src="img/KB_Pl.png" alt="Двойное предложение 3"><!--Исправить!-->
-              <a class="button button_purchase" href="3">Давайте оба</a><!--Исправить-->
+              <a class="button button_purchase" href="3">Давайте оба!</a><!--Исправить-->
             </li>
           </ul>
       </section>
@@ -66,17 +76,16 @@
             </li>
           </ul>
       </section>
-      <section class="catalog hit-offer">
+      <section class="catalog">
           <h2 class="visually-hidden">Хиты продаж</h2>
-          <ul>
+          <ul class="catalog-list hit-offer">
             <li>
               <article class="catalog-item">
                   <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                   <img src="img/h1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                   <p class="is-hit">ХИТ</p>
-                  <p class="price">310</p>
-                  <p class="currency">₽</p>
-                  <span class="unit">/кг</span>
+                  <p class="price">310₽<span>/кг</span></p>
+                  <a class="button button_purchase" href="1">Быстрый просмотр</a><!--Исправить-->
               </article>
             </li>
             <li>
@@ -84,9 +93,7 @@
                   <h3>Сливочно-кофейное с кусочками шоколада</h3>
                   <img src="img/h2.png" alt="Сливочно-кофейное с кусочками шоколада">
                   <p class="is-hit">ХИТ</p>
-                  <p class="price">380</p>
-                  <p class="currency">₽</p>
-                  <span class="unit">/кг</span>
+                  <p class="price">380₽<span>/кг</span></p>
               </article>
             </li>
             <li>
@@ -94,9 +101,7 @@
                   <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
                   <img src="img/h3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                   <p class="is-hit">ХИТ</p>
-                  <p class="price">355</p>
-                  <p class="currency">₽</p>
-                  <span class="unit">/кг</span>
+                  <p class="price">355₽<span>/кг</span></p>
               </article>
             </li>
             <li>
@@ -104,9 +109,7 @@
                   <h3>Сливочное крем-брюле с кармельной подливкой</h3>
                   <img src="img/h4.png" alt="Сливочное крем-брюле с кармельной подливкой">
                   <p class="is-hit">ХИТ</p>
-                  <p class="price">415</p>
-                  <p class="currency">₽</p>
-                  <span class="unit">/кг</span>
+                  <p class="price">415₽<span>/кг</span></p>
               </article>
             </li>
           </ul>
