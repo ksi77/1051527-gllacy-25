@@ -1,30 +1,71 @@
 body {
   font-family: Roboto, arial;
-  width: 1200px;
   background-color: #849d8f;
   /*background-image: url(../gllacy-index.jpg);*/
-  margin: 9px 27px;
+  margin: 10px 30px;
   color: white;
 }
 
-ul {
-  list-style: none;
+.container {
+ width: 1180px;
+ position: relative;
+ padding: 10px
 }
 
-.visually-hidden { /*Почему не работает меню выпадающее, когда это правило прописано???--*/
+.container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+
+.visually-hidden { /*ÃƒÂÃ…Â¸ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Â¡ÃƒÂÃ‚ÂµÃƒÂÃ‚Â¼Ãƒâ€˜Ã†â€™ ÃƒÂÃ‚Â½ÃƒÂÃ‚Âµ Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â°ÃƒÂÃ‚Â±ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â°ÃƒÂÃ‚ÂµÃƒâ€˜Ã¢â‚¬Å¡ ÃƒÂÃ‚Â²Ãƒâ€˜Ã¢â‚¬Â¹ÃƒÂÃ‚Â¿ÃƒÂÃ‚Â°ÃƒÂÃ‚Â´ÃƒÂÃ‚Â°Ãƒâ€˜Ã…Â½Ãƒâ€˜Ã¢â‚¬Â°ÃƒÂÃ‚Â¸ÃƒÂÃ‚Â¹ Ãƒâ€˜Ã‚ÂÃƒÂÃ‚Â¿ÃƒÂÃ‚Â¸Ãƒâ€˜Ã‚ÂÃƒÂÃ‚Â¾ÃƒÂÃ‚Âº, ÃƒÂÃ‚ÂºÃƒÂÃ‚Â¾ÃƒÂÃ‚Â³ÃƒÂÃ‚Â´ÃƒÂÃ‚Â° Ãƒâ€˜Ã‚ÂÃƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â¾ ÃƒÂÃ‚Â¿Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â°ÃƒÂÃ‚Â²ÃƒÂÃ‚Â¸ÃƒÂÃ‚Â»ÃƒÂÃ‚Â¾ ÃƒÂÃ‚Â²ÃƒÂÃ‚ÂºÃƒÂÃ‚Â»Ãƒâ€˜Ã…Â½Ãƒâ€˜Ã¢â‚¬Â¡ÃƒÂÃ‚ÂµÃƒÂÃ‚Â½ÃƒÂÃ‚Â¾???--*/
   display: none;
 }
 
+.button {
+  display: inline-block;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  text-decoration: none;
+}
+
+.button.red-button {
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border-radius: 30px; /*------------------------------ÃƒÂÃ‚ÂÃƒÂÃ‚Â°ÃƒÂÃ‚Â²ÃƒÂÃ‚ÂµÃƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â½ÃƒÂÃ‚Â¾ÃƒÂÃ‚Âµ, ÃƒÂÃ‚Â½ÃƒÂÃ‚Â°ÃƒÂÃ‚Â´ÃƒÂÃ‚Â¾ ÃƒÂÃ‚Â² ÃƒÂÃ‚Â¿Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Â ÃƒÂÃ‚ÂµÃƒÂÃ‚Â½Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â°Ãƒâ€˜Ã¢â‚¬Â¦ x y*/
+  font-weight: bold;
+  padding: 0 5%;
+}
+
+/*------header-----------------------------------------------------header--*/
 
 .logo {
   float: left;
+  margin-right: 20px;
 }
+
 .main-navigation {
+  padding-top: 16px;
   float: left;
 }
 
 .main-navigation ul {
   color: white;
+
 
 }
 .main-navigation > ul > li {
@@ -33,9 +74,6 @@ ul {
   position: relative;
 }
 
-.container {
- position: relative;
-}
 
 
 .main-navigation a {
@@ -57,83 +95,68 @@ ul {
 }
 
 .user-menu {
-  width: 300px;
   float: right;
-
+  padding-top: 14px;
 }
 
 .user-menu li {
   display: inline-block
-
 }
 
-.button {
-  display: block;
-  color: white;
-  vertical-align: middle;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-}
 .user-menu .button {
   padding-right: 17px;
-  background-position: 16px 50%;
+  padding-left: 45px;
   font-size: 14px;
   line-height: 33px;
   text-align: right;
   background-color: rgba(255, 255, 255, 0.2);
   background-repeat: no-repeat;
+  background-position: 16px 50%;
   border-radius: 15px;
+  margin-left: 10px;
 }
 
-.find-button {
+.button.find-button { /*ÃÅ¸ÃÂ¾Ã‘â€¡ÃÂµÃÂ¼Ã‘Æ’ ÃÂ¿Ã‘â‚¬Ã‘â€¹ÃÂ³ÃÂ½Ã‘Æ’ÃÂ» ÃÂ²ÃÂ²ÃÂµÃ‘â‚¬Ã‘â€¦?*/
+  padding: 0;
   width: 33px;
   height: 33px;
+  line-height: 33px;
   background-image: url(../img/find.svg);
   background-position: 50% 50%;
 }
 
 .login-button {
-  width: 93px;
-  height: 33px;
   background-image: url(../img/login.svg);
   background-position: 16px 50%;
 }
 
 .buscket-button {
-  width: 100px;
-  height: 33px;
   background-image: url(../img/buscket.svg);
   background-position: 25px 50%;
-}
-.container:after {
-  display: table;
-  clear: both;
-  content: "";
 }
 .work-time {
   position: absolute;
   right: 15px;
   top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
 }
-/*___header end_____________________________________________________*/
 
-/*___double offer_______________________________________________*/
+/*----------header end-----------------------------------------------------*/
+
+/*----------double offer---------------------------------------------------*/
 .slide img {
   position: absolute;
   top: -90px;
+  left: center;
   z-index: 5;
-  text-align:center
-
 }
+
 .slide h3 {
   position: absolute;
   padding-top: -200px;
   z-index: 10;
   text-align: center;
   top: 230px;
-  left: 225px;
+  left: 20%;
   font-weight: bold;
   font-size: 60px; 
 }
@@ -146,22 +169,227 @@ ul {
    font-size: 32px;
   line-height: 64px;
   font-weight: bold;
-  width: 280px;
-  height: 64px;
-  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-  background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 30px;
-}
+ }
+
 .slider-buttons {
   padding-top: 500px;
 }
+
 .slider-button {
   display: inline-block;
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
+
 .slider .current-slide {
   background-color: white;
 }
+
+/*----------double-offer end---------------------------------------------------*/
+
+/*----------bonus-offer---------------------------------------------------*/
+ .bonus-offer li {
+   box-sizing: border-box;
+   display: block;
+   width: 560px;
+   height: 229px;
+   border-radius: 20px;
+   padding: 20px;
+ }
+ .bonus-offer li:first-child {
+   float: left;
+   background: url(../img/raspberries.jpg);
+ }
+ .bonus-offer li:last-child {
+   float: right;
+   background: url(../img/chocolate.jpg);
+ }
+ .bonus-offer h3 {
+   font-size: 35px;
+   font-weight: bold;
+   margin: 0;
+ }
+ .bonus-offer p {
+   font-size: 18px;
+   font-weight: bold;
+ }
+ .bonus-offer .button {
+   margin: 20px;
+   line-height: 45px;
+   float: right
+
+ }
+ 
+/*----------bonus-offer-end--------------------------------------------------*/
+
+/*----------hits offer---------------------------------------------------*/
+ .catalog img {
+   border-radius: 50%;
+ }
+
+ .catalog li {
+   display: inline-block; /* ÃÂ¿ÃÂ¾ÃÂºÃÂ° Ã‘â€šÃÂ°ÃÂº*/
+   margin-right: 26px;
+ }
+
+ .catalog h3 {
+   width: 250px;
+   font-size: 15px;
+   line-height: 22px;
+   text-align: center;
+ }
+
+ .catalog .button {
+   line-height: 44px;
+ }
+/*----------hits offer end---------------------------------------------------*/
+
+/*----------features---------------------------------------------------*/
+.features {
+  display: block;
+  color: black;
+  width: 1110px;
+  background-image: url(../img/wafer.jpg);
+  border-radius: 30px;
+  padding: 20px;
+}
+.features h3 {
+  width: 1115px;
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.25;
+  padding: 0;
+}
+
+.features p{
+  width: 475px;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: left;
+  padding: 0 0 0 50px;
+  margin: 28px 0 0 0;
+}
+
+.features ul li {
+  float: left;
+  margin-right: 0;
+  position: relative;
+}
+
+.features ul li:nth-child(2n){
+  float: right;
+}
+
+.features li:before { /*The place for icon. Why can't see it?*/
+  display: block;
+  width: 49px;
+  height: 49px;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.features .eco-standarts:before {
+  background-image: url(../img/leaf.svg);
+}
+
+.features:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/*----------features end---------------------------------------------------*/
+
+/*----------news-subscription---------------------------------------------------*/
+.news-subscription {
+  width: 1150px;
+  color: black;
+}
+
+.news-subscription .blog-news {
+  display: block;
+  float: left;
+  width: 520px;
+  height: 180px;
+  padding: 20px;
+  background: url(../img/blog-news.jpg);
+  border-radius: 20px; 
+}
+
+.news-subscription .blog-news h3 {
+  text-decoration: underline;
+  width: 280px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.news-subscription .blog-news h2 {
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: left;
+ }
+
+ .news-subscription .subscription {
+   display: block;
+   width: 560px;
+   height: 220px;
+   background: url(../img/post-pattern.svg);
+   float: right;
+ }
+
+  .news-subscription .subscription .form{
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 549px;
+    height: 211px;
+    margin: auto;
+    margin-top: 5px;
+    background: white;
+    padding: 20px
+  }
+
+/*----------news-subscription-end---------------------------------------------------*/
+
+/*----------contacts---------------------------------------------------*/
+.container.contacts {
+
+}
+
+.contacts .address {
+  position: absolute;
+  top: 40px;
+  left: 800px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  width: 302px;
+  height: 305px;
+  background: white;
+  border-radius: 20px;
+  padding: 32px 25px;
+}
+
+.contacts .address span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.contacts .button {
+  line-height: 45px;
+  font-size: 18px;
+  
+}
+
+ .contacts .map{
+   padding: 0;
+ }
+/*----------contacts-end---------------------------------------------------end---------------------------------------------------*/
