@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto, arial;
+  font-family: "Roboto", sans-serif;
   background-color: #849d8f;
   /*background-image: url(../gllacy-index.jpg);*/
   margin: 10px 30px;
@@ -7,31 +7,20 @@ body {
 }
 
 .container {
- width: 1180px;
- position: relative;
- padding: 10px
+  width: 1180px;
+/*  position: relative;*/
+  padding: 10px;
 }
 
-.container:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-
-ul {
-  list-style: none;
-  margin: 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
   padding: 0;
-}
-
-li {
-  padding: 0;
-}
-
-
-.visually-hidden { /*ÃƒÆ’Ã‚ÂÃƒâ€¦Ã‚Â¸ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂµÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¼ÃƒÆ’Ã¢â‚¬ËœÃƒâ€ Ã¢â‚¬â„¢ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Âµ ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â±ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂµÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â²ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¿ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â´ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬ËœÃƒâ€¦Ã‚Â½ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¸ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¹ ÃƒÆ’Ã¢â‚¬ËœÃƒâ€šÃ‚ÂÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¿ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬ËœÃƒâ€šÃ‚ÂÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Âº, ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂºÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â³ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â´ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â° ÃƒÆ’Ã¢â‚¬ËœÃƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¿ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â²ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¸ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â»ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â²ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂºÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬ËœÃƒâ€¦Ã‚Â½ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂµÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾???--*/
-  display: none;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -46,40 +35,41 @@ li {
 .button.red-button {
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 30px; /*------------------------------ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â²ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂµÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Âµ, ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â´ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â² ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¿ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂµÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ x y*/
+  border-radius: 30px;
   font-weight: bold;
   padding: 0 5%;
 
 }
 
 .button.red-button:hover{
-  box-shadow: 0px px 2px 0 #ac1000; 
+  box-shadow: 0px px 2px 0 #ac1000;
   background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
 }
+
+.button.gray-button:hover {
+  background-color: #f8f7f4;
+  color: black;
+}
+
 /*------header-----------------------------------------------------header--*/
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .logo {
-  float: left;
   margin-right: 20px;
 }
 
 .main-navigation {
   padding-top: 16px;
-  float: left;
 }
 
-.main-navigation ul {
-  color: white;
-
-
-}
-.main-navigation > ul > li {
-  display: inline-block;
+.main-navigation-item {
   margin-right: 28px;
   position: relative;
 }
-
-
 
 .main-navigation a {
   color: white;
@@ -90,22 +80,16 @@ li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-navigation li .submenu {
+.main-navigation-item .submenu {
   display: none;
-  position: absolute;
 }
 
-.main-navigation li:hover .submenu {
+.main-navigation-item:hover .submenu {
   display: block;
 }
 
 .user-menu {
-  float: right;
   padding-top: 14px;
-}
-
-.user-menu li {
-  display: inline-block
 }
 
 .user-menu .button {
@@ -121,67 +105,52 @@ li {
   margin-left: 10px;
 }
 
-.button.find-button { /*ÃƒÂÃ…Â¸ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Â¡ÃƒÂÃ‚ÂµÃƒÂÃ‚Â¼Ãƒâ€˜Ã†â€™ ÃƒÂÃ‚Â¿Ãƒâ€˜Ã¢â€šÂ¬Ãƒâ€˜Ã¢â‚¬Â¹ÃƒÂÃ‚Â³ÃƒÂÃ‚Â½Ãƒâ€˜Ã†â€™ÃƒÂÃ‚Â» ÃƒÂÃ‚Â²ÃƒÂÃ‚Â²ÃƒÂÃ‚ÂµÃƒâ€˜Ã¢â€šÂ¬Ãƒâ€˜Ã¢â‚¬Â¦?*/
+.button.find-button {
   padding: 0;
   width: 33px;
   height: 33px;
   line-height: 33px;
-  background-image: url(../img/find.svg);
+  background-image: url(../img/icon-find.svg);
   background-position: 50% 50%;
 }
 
 .login-button {
-  background-image: url(../img/login.svg);
+  background-image: url(../img/icon-login.svg);
   background-position: 16px 50%;
 }
 
 .buscket-button {
-  background-image: url(../img/buscket.svg);
+  background-image: url(../img/icon-buscket.svg);
   background-position: 25px 50%;
 }
 .work-time {
-  position: absolute;
   right: 15px;
   top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
 }
 
 /*----------header end-----------------------------------------------------*/
 
-/*----------double offer---------------------------------------------------*/
-.slide img {
-  position: absolute;
-  top: -90px;
-  left: center;
-  z-index: 5;
+/*----------special offer---------------------------------------------------*/
+.special-offer .slider-list {
+  list-style: none;
 }
-
-.slide h3 {
-  position: absolute;
-  padding-top: -200px;
-  z-index: 10;
+.slider-item h3 {
   text-align: center;
-  top: 230px;
-  left: 20%;
   font-weight: bold;
-  font-size: 60px; 
+  font-size: 60px;
 }
 
-.slide .button {
-  position: absolute;
-  top: 460px;
-  left: 450px;
-  z-index:10;
-   font-size: 32px;
+.slider-item .button {
+  font-size: 32px;
   line-height: 64px;
   font-weight: bold;
  }
 
-.slider-buttons {
-  padding-top: 500px;
+.slider-switcher {
 }
 
-.slider-button {
-  display: inline-block;
+.slider-switcher .button {
+  display: block;
   border: 3px solid white;
   border-radius: 50%;
   width: 20px;
@@ -196,55 +165,73 @@ li {
 /*----------double-offer end---------------------------------------------------*/
 
 /*----------bonus-offer---------------------------------------------------*/
- .bonus-offer li {
-   box-sizing: border-box;
-   display: block;
-   width: 560px;
-   height: 229px;
-   border-radius: 20px;
-   padding: 20px;
- }
- .bonus-offer li:first-child {
-   float: left;
-   background: url(../img/raspberries.jpg);
- }
- .bonus-offer li:last-child {
-   float: right;
-   background: url(../img/chocolate.jpg);
- }
- .bonus-offer h3 {
-   font-size: 35px;
-   font-weight: bold;
-   margin: 0;
- }
- .bonus-offer p {
-   font-size: 18px;
-   font-weight: bold;
- }
- .bonus-offer .button {
-   margin: 20px;
-   line-height: 45px;
-   float: right
+.bonus-offer {
+  position: relative;
+  z-index: 7;
+}
 
+.bonus-offer li {
+ box-sizing: border-box;
+ display: block;
+ width: 560px;
+ height: 229px;
+ border-radius: 20px;
+ padding: 20px;
+}
+
+.bonus-offer-item1  {
+ background-color: #8E1730;
+ background-image: url(../img/bg-raspberries.jpg);
+}
+
+.bonus-offer-item2 {
+ background-color: #5E3A29;
+ background-image: url(../img/bg-chocolate.jpg);
  }
- 
+
+.bonus-offer h3 {
+ font-size: 35px;
+ font-weight: bold;
+ margin: 0;
+}
+
+.bonus-offer p {
+ font-size: 18px;
+ font-weight: bold;
+}
+
+.bonus-offer .button {
+ margin: 20px;
+ line-height: 45px;
+ float: right;
+ }
+
 /*----------bonus-offer-end--------------------------------------------------*/
 
 /*----------hits offer---------------------------------------------------*/
- .catalog img {
-   border-radius: 50%;
- }
+.catalog .is-hit{
+  display: block;
+  width: 61px;
+  height: 61px;
+  background-image: url(../img/mark-hit.svg);
+  background-repeat: no-repeat;
+}
 
- .catalog li {
-   display: inline-block; /* ÃƒÂÃ‚Â¿ÃƒÂÃ‚Â¾ÃƒÂÃ‚ÂºÃƒÂÃ‚Â° Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â°ÃƒÂÃ‚Âº*/
+.catalog img {
+ border-radius: 50%;
+}
+
+ .catalog-item {
+   display: inline-block;
    margin-right: 25px;
  }
 
  .catalog h3 {
    width: 250px;
-   font-size: 15px;
+   font-size: 16px;
    line-height: 22px;
    text-align: center;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
  }
 
  .catalog .button {
@@ -257,10 +244,18 @@ li {
   display: block;
   color: black;
   width: 1110px;
-  background-image: url(../img/wafer.jpg);
+  background-image: url(../img/bg-wafer.jpg);
+  background-color: #EBDFC3;
   border-radius: 30px;
   padding: 20px;
 }
+
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .features h3 {
   width: 1115px;
   font-size: 24px;
@@ -278,17 +273,12 @@ li {
   margin: 28px 0 0 0;
 }
 
-.features ul li {
-  float: left;
+.features-item {
   margin-right: 0;
   position: relative;
 }
 
-.features ul li:nth-child(2n){
-  float: right;
-}
-
-.features li:before { /*The place for icon. Why can't see it?*/
+.features-item:before { /*The place for icon. Why can't see it?*/
   display: block;
   width: 49px;
   height: 49px;
@@ -299,16 +289,21 @@ li {
   left: 0;
 }
 
-.features .eco-standarts:before {
-  background-image: url(../img/leaf.svg);
+.features-item.eco-standarts:before {
+  background-image: url(../img/icon-leaf.svg);
 }
 
-.features:after {
-  display: table;
-  clear: both;
-  content: "";
+.features-item.high-quality:before {
+  background-image: url(../img/icon-leaf.svg);
 }
 
+.features-item.we-owners:before {
+  background-image: url(../img/icon-leaf.svg);
+}
+
+.features-item.preservation:before {
+  background-image: url(../img/icon-leaf.svg);
+}
 /*----------features end---------------------------------------------------*/
 
 /*----------news-subscription---------------------------------------------------*/
@@ -317,17 +312,18 @@ li {
   color: black;
 }
 
-.news-subscription .blog-news {
+.blog-news {
   display: block;
-  float: left;
+
   width: 520px;
   height: 180px;
   padding: 20px;
-  background: url(../img/blog-news.jpg);
-  border-radius: 20px; 
+  background-color: white;
+  background-image: url(../img/bg-blog-news.jpg);
+  border-radius: 20px;
 }
 
-.news-subscription .blog-news h3 {
+.blog-news h3 {
   text-decoration: underline;
   width: 280px;
   margin: 0;
@@ -337,64 +333,117 @@ li {
   text-align: left;
 }
 
-.news-subscription .blog-news h2 {
+.blog-news h2 {
   font-size: 16px;
   line-height: 1.38;
   text-align: left;
  }
 
- .news-subscription .subscription {
-   display: block;
-   width: 560px;
-   height: 220px;
-   background: url(../img/post-pattern.svg);
-   float: right;
- }
-
-  .news-subscription .subscription .form{
-    box-sizing: border-box;
-    border-radius: 20px;
-    width: 549px;
-    height: 211px;
-    margin: auto;
-    margin-top: 5px;
-    background: white;
-    padding: 20px
+.subscription {
+  box-sizing: border-box;;
+  display: block;
+  padding-top: 5px;
+  width: 560px;
+  height: 220px;
+  background-image: url(../img/bg-post-pattern.svg);
   }
+
+.subscription .form{
+  display: block;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 549px;
+  height: 211px;
+  margin: 0 auto;
+  margin-top: 5px;
+  background-color: white;
+  padding: 20px
+}
 
 /*----------news-subscription-end---------------------------------------------------*/
 
 /*----------contacts---------------------------------------------------*/
-.container.contacts {
 
-}
 
-.contacts .address {
-  position: absolute;
+.contacts-address {
+  box-sizing: border-box;
   top: 40px;
-  left: 800px;
+  left: 860px;
   color: black;
   font-size: 18px;
   font-weight: bold;
   width: 302px;
   height: 305px;
-  background: white;
+  background-color: white;
   border-radius: 20px;
   padding: 32px 25px;
 }
 
-.contacts .address span {
+.contacts-address span {
   font-size: 14px;
   font-weight: normal;
 }
 
-.contacts .button {
+.contacts-address .button {
   line-height: 45px;
   font-size: 18px;
-  
 }
 
- .contacts .map{
+ .contacts .map {
    padding: 0;
  }
 /*----------contacts-end---------------------------------------------------end---------------------------------------------------*/
+
+/*----------footer---------------------------------------------------         ---------------------------------------------------*/
+footer a {
+  color: white;
+}
+
+footer .social-list {
+  list-style: none;
+}
+
+footer .button {
+  width: 38px;
+  height: 38px;
+  opacity: 0.5;
+}
+
+footer .social{
+  display: block;
+}
+
+footer .tw {
+  background-image: url(../img/icon-tw.svg);
+  background-repeat: no-repeat;
+}
+
+footer .insta {
+  background-image: url(../img/icon-insta.svg);
+  background-repeat: no-repeat;
+}
+
+footer .fb {
+  background-image: url(../img/icon-fb.svg);
+  background-repeat: no-repeat;
+}
+
+footer .vk {
+  background-image: url(../img/icon-vk.svg);
+  background-repeat: no-repeat;
+}
+
+footer .about-us-list {
+  list-style: none;
+}
+
+.for-suppliers:after {
+  position: absolute;
+  left: 400px;
+  top: -10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon-heart.svg);
+}
+/*----------footer-end--------------------------------------------------         ---------------------------------------------------*/
