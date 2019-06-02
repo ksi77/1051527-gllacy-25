@@ -35,18 +35,21 @@ body {
 .button.red-button {
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 30px;
+  border-radius: 20px;
   font-weight: bold;
   padding: 0 5%;
+  height: 44px;
 
 }
 
-.button.red-button:hover{
+.button.red-button:hover,
+.button.red-button:focus {
   box-shadow: 0px px 2px 0 #ac1000;
   background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
 }
 
-.button.gray-button:hover {
+.button.gray-button:hover,
+.button.gray-button:focus {
   background-color: #f8f7f4;
   color: black;
 }
@@ -71,11 +74,20 @@ header ul {
   position: relative;
 }
 
-.main-navigation a {
+.main-navigation-item:hover > a,
+.main-navigation-item:focus > a  {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #f8f7f4;
+  color: black;
+}
+
+.main-navigation-item > a {
   color: white;
   font-size: 16px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 32px;
+  padding: 0 13px;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -84,8 +96,52 @@ header ul {
   display: none;
 }
 
-.main-navigation-item:hover .submenu {
-  display: block;
+.main-navigation-item:hover .submenu,
+.main-navigation-item:focus .submenu {
+  display: table;
+  margin-top: 5px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  padding: 21px;
+  color: black;
+}
+
+.submenu li:hover,
+.submenu li:focus {
+  background-color: #fbded8;  
+}
+
+.submenu li:active {
+  background-color: #f6b5a5 ;
+}
+
+.submenu li a:active{
+  background-color: #d07058;
+}
+
+.submenu li:first-child:hover,
+.submenu li:first-child:focus {
+  border-radius: 5px 5px 0 0;
+}
+
+.submenu li:last-child:hover,
+.submenu li:last-child:focus {
+  border-radius: 0 0 5px 5px;
+}
+
+
+.submenu li:first-child {
+  font-weight: bold;
+  /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
+}
+
+.submenu a {
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+  line-height: 28px;
+  font-size: 14px;
 }
 
 .user-menu {
@@ -105,28 +161,147 @@ header ul {
   margin-left: 10px;
 }
 
-.find-button {
+.user-menu .find-button {
   padding: 0;
   width: 33px;
   height: 33px;
-  line-height: 33px;
+  border-radius: 50%;
   background-image: url(../img/icon-find.svg);
-  background-position: 50% 50%;
+  background-position: 8px 8px;
 }
 
-.login-button {
+.find-button:hover,
+.find-button:focus {
+  background-image: url(../img/icon-find-hover.svg);
+}
+
+.user-menu .login-button {
   background-image: url(../img/icon-login.svg);
   background-position: 16px 50%;
 }
 
-.buscket-button {
-  background-image: url(../img/icon-buscket.svg);
-  background-position: 25px 50%;
+.login-button:hover
+.login-button:focus {
+  background-image: url(../img/icon-login-hover.svg);
+  background-position: 16px 50%;
 }
+
+.user-menu .buscket-button {
+  background-image: url(../img/icon-buscket-empty.svg);
+  background-position: 16px 50%;
+}
+
 .work-time {
   right: 15px;
   top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
 }
+
+.tel { /* Doesn't work!!!!!!!!!!!!!!!!!!!!!!1 */
+  color: white; 
+  font-size: 22px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+
+/*-----------------header-forms---------------------------------------------*/
+
+.header-form {
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  line-height: 44px;
+  font-size: 14px;
+}
+
+.header-form input,
+.header-form textarea {
+  box-sizing: border-box;
+  line-height: 44px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+
+.header-form .button {
+  height: 44px;
+  font-size: 18px;
+}
+
+.login-form {
+  width: 277px;
+  padding: 20px 17px 22px 19px;
+}
+
+.login-form .email {
+  width: 241px;
+}
+
+.login-form .password {
+  margin-top: 20px;
+  width: 241px;
+}
+
+.login-form a {
+  color: black;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.login-form .button {
+  margin-top: 20px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.find-form {
+  width: 341px;
+  padding: 20px 15px;
+}
+
+.find-form input {
+  width: 311px;  
+  padding-left: 15px;
+}
+
+.feedback-form {
+  width: 478px;
+  padding: 20px 26px 27px 24px;
+  position: relative;
+}
+
+.feedback-form h3 {
+  color: black;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.feedback-form .close-form-button {
+  position: absolute;
+  right: 26px;
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/btn-cross-small.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+}
+
+.feedback-form input {
+  width: 267px;
+  margin-top: 20px;
+}
+
+
+.feedback-form textarea {
+  width: 428px;
+  height: 155px;
+}
+
+
+/*----------------------------header-forms-end-------------------------*/
 
 /*----------header end-----------------------------------------------------*/
 
@@ -134,16 +309,19 @@ header ul {
 .special-offer .slider-list {
   list-style: none;
 }
+
 .slider-item h3 {
   text-align: center;
   font-weight: bold;
   font-size: 60px;
+  width: 665px;
 }
 
 .slider-item .button {
   font-size: 32px;
   line-height: 64px;
   font-weight: bold;
+  height: 64px;
  }
 
 .slider-switcher {
@@ -153,9 +331,11 @@ header ul {
   display: block;
   border: 3px solid white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
+  background-color: transparent;
+
 }
 
 .slider .current-slide {
@@ -193,6 +373,7 @@ header ul {
  font-size: 35px;
  font-weight: bold;
  margin: 0;
+
 }
 
 .bonus-offer p {
@@ -264,7 +445,7 @@ header ul {
   padding: 0;
 }
 
-.features p{
+.features p {
   width: 475px;
   font-size: 16px;
   line-height: 1.38;
@@ -278,31 +459,28 @@ header ul {
   position: relative;
 }
 
-.features-item:before { /*The place for icon. Why can't see it?*/
+.features-item:before { 
+  position: absolute;
   display: block;
+  content: "";
   width: 49px;
   height: 49px;
-  border: 1px solid black;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
 }
 
-.features-item.eco-standarts:before {
+.eco-standarts:before { 
   background-image: url(../img/icon-leaf.svg);
 }
 
-.features-item.high-quality:before {
-  background-image: url(../img/icon-leaf.svg);
+.high-quality:before {
+  background-image: url(../img/icon-cow.svg);
 }
 
 .features-item.we-owners:before {
-  background-image: url(../img/icon-leaf.svg);
+  background-image: url(../img/icon-ice-cream.svg);
 }
 
 .features-item.preservation:before {
-  background-image: url(../img/icon-leaf.svg);
+  background-image: url(../img/icon-thermometer.svg);
 }
 /*----------features end---------------------------------------------------*/
 
@@ -365,13 +543,11 @@ header ul {
 /*----------contacts---------------------------------------------------*/
 
 
-.contacts-address {
+.contacts-card {
   box-sizing: border-box;
-  top: 40px;
-  left: 860px;
   color: black;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px; 
+  line-height: 20px;
   width: 302px;
   height: 305px;
   background-color: white;
@@ -379,14 +555,35 @@ header ul {
   padding: 32px 25px;
 }
 
-.contacts-address span {
-  font-size: 14px;
-  font-weight: normal;
+.contacts-item1 {
+  margin: 0;
+  width: 148px;
 }
 
-.contacts-address .button {
+.contacts-working-time {
+  margin: 0;
+}
+
+.contacts-item2 {
+  margin-bottom: 0;
+}
+
+.contacts-address,
+.contacts-tel {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  width: 220px;
+  color: black;
+  text-decoration: none;
+}
+
+.contacts-card .button {
   line-height: 45px;
   font-size: 18px;
+  padding: 0 28px;
+  margin-top: 26px;
 }
 
  .contacts .map {

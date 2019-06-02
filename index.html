@@ -37,27 +37,46 @@
           <a class=" button gray-button login-button" href="">Вход</a>
         </li>
         <li class="user-menu-item">
-          <a class="button gray-button buscket-button" href="">Корзина</a>
+          <a class="button gray-button buscket-button" href="">Пусто</a>
         </li>
       </ul>
-      <p class="work-time">С 10 до 20, ежедневно
-          <a class="tel" href="tel:+78124502525" aria-label="Наш телефон: "><b>8 812 450-25-25</b></a>
-      </p>
+      <p class="work-time">С 10 до 20, ежедневно</p>
+      <a class="tel" href="tel:+78124502525" aria-label="Наш телефон: ">
+          <b>8 812 450-25-25</b>
+      </a>
+      <form class="login-form header-form" action="index.html" method="post">
+        <input class="email" type="email" name="login" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+        <input class="password" type="password" name="password" placeholder="Пароль" aria-label="Пароль">
+        <button class="button red-button" type="submit">Войти</button>
+        <div class="login-links-wrapper">
+          <a class="i-forget-password" href="forget-password.html" aria-label="Восстановить пароль">Забыли пароль?</a>
+          <a class="new-registration" href="new-registration.html">Новая регистрация</a>
+        </div>
+      </form>
+      <form class="find-form header-form" action="index.html" method="post">
+        <input type="text" placeholder="Что ищем?" aria-label="Что ищем?">
+      </form>
+      <form class="feedback-form  header-form" action="index.html" method="post">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <button class="button close-form-button" type="button" name="button" aria-label="Закрыть окно формы обратной связи"></button>
+        <h3 aria-label="Напишите нам и...">Мы обязательно вам ответим!</h3>
+        <input class="name" type="text" aria-label="Как вас зовут?" placeholder="Как вас зовут?">
+        <input class="email" type="text" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?">
+        <textarea class="message"  aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
+        <button class="button red-button submit" type="submit" name="button">Отправить</button>
+      </form>
     </header>
     <main>
       <h1 class="visually-hidden">Магазин мороженого GllacyShop</h1>
         <section class="special-offer slider">
           <h2 class="visually-hidden">Специальное предложение</h2>
           <div class="slider-switcher">
-            <div class="button slider-button current-slide">
-              <!--Что это? ссылка, или нет?-->
-            </div>
-            <div class="button slider-button">
-
-            </div>
-            <div class="button slider-button">
-
-            </div>
+            <button class="button slider-button current-slide" aria-label="Первый слайд">
+            </button>
+            <button class="button slider-button" aria-label="Второй слайд">
+            </button>
+            <button class="button slider-button" aria-label="Третий слайд">
+            </button>
           </div>
           <ul class="slider-list">
             <li class="slider-item slider-item1">
@@ -149,11 +168,12 @@
                     долговременное сортудничество.
               </p>
             </li>
-            <li class="featyres-item high-quality">
+            <li class="features-item high-quality">
               <p> Для приготовления мороженого используются настоящие
                     сливки и молоко высочайшего качества. Все дополнительные
                     ингредиенты и добавки произведены из натурального,
-                    экологически чистого сырья.</p>
+                    экологически чистого сырья.
+              </p>
             </li>
             <li class="features-item preservation">
               <p> Доставка нашего мороженого до заказчика осуществляется
@@ -181,17 +201,12 @@
           <section class="contacts">
             <h2 class="visually-hidden">Наши контакты</h2>
               <img src="img/map.jpg" class="map" alt="Карта с местоположением Google" width="1200" height="430"><!--Пока так-->
-              <div class="contacts-address">
-                <p>
-                  <span>Адрес главного офиса и онлайн-магазина</span>
-                         ул. Большая Конюшенная
-                        19/8, Санкт-Петербург
-                </p>
-                <p>
-                  <span>Для звонков по телефону</span>
-                         8 812 450-25-25
-                        <span>(с 10 до 20 ежедневно)</span>
-                </p>
+              <div class="contacts-card">
+                <p class="contacts-item1">Адрес главного офиса и офлайн-магазина:</p>
+                <p class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                <p class="contacts-item2">Для заказов по телефону:</p>
+                <a class="contacts-tel" href="tel:+78124502525">8 812 450-25-25</a>
+                <p class="contacts-working-time">(с 10 до 20 ежедневно)</p>
                 <div class="button feedback-button red-button">
                   Форма обратной связи
                 </div>
