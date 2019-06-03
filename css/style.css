@@ -44,7 +44,7 @@ body {
 
 .button.red-button:hover,
 .button.red-button:focus {
-  box-shadow: 0px px 2px 0 #ac1000;
+  box-shadow: 0px 2px 2px 0 #ac1000;
   background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
 }
 
@@ -187,7 +187,13 @@ header ul {
 }
 
 .user-menu .basket-button {
-  background-image: url(../img/icon-basket-empty.svg);
+  background-image: url(../img/icon-basket-white.svg);
+  background-position: 16px 50%;
+}
+
+.user-menu .basket-button:hover,
+.user-menu .basket-button:focus {
+  background-image: url(../img/icon-basket-red.svg);
   background-position: 16px 50%;
 }
 
@@ -196,7 +202,7 @@ header ul {
   top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
 }
 
-.tel { /* Doesn't work!!!!!!!!!!!!!!!!!!!!!!1 */
+.tel { 
   color: white;
   font-size: 22px;
   line-height: 24px;
@@ -329,9 +335,11 @@ header ul {
 .basket-table-caption {
   font-size: 15px;
   font-weight: bold;
+  caption-side: bottom;
+  text-align: right;
 }
 
-caption h3 {
+.bascet-table-caption h3 {
   font-size: 15px;
 }
 
@@ -341,7 +349,8 @@ caption h3 {
 }
 
 .basket-table-row td:nth-child(1) {
-  width: 27px;
+  width: 25px;
+  text-align: left;
 }
 
 .basket-table-row td:nth-child(2) {
@@ -368,10 +377,20 @@ caption h3 {
   height: 11px;
   line-height: 0;
   font-size: 0;
+  padding: 0;
   background-image: url(../img/btn-cross-small.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-color: transparent;
+  box-shadow: none;
+}
+
+.basket-form .button {
+  float: right;
+}
+
+.basket-form img {
+  border-radius: 50%;
 }
 /*----------------------------header-forms-end-------------------------*/
 
