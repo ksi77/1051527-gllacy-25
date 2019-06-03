@@ -109,7 +109,7 @@ header ul {
 
 .submenu li:hover,
 .submenu li:focus {
-  background-color: #fbded8;  
+  background-color: #fbded8;
 }
 
 .submenu li:active {
@@ -186,8 +186,8 @@ header ul {
   background-position: 16px 50%;
 }
 
-.user-menu .buscket-button {
-  background-image: url(../img/icon-buscket-empty.svg);
+.user-menu .basket-button {
+  background-image: url(../img/icon-basket-empty.svg);
   background-position: 16px 50%;
 }
 
@@ -197,7 +197,7 @@ header ul {
 }
 
 .tel { /* Doesn't work!!!!!!!!!!!!!!!!!!!!!!1 */
-  color: white; 
+  color: white;
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
@@ -260,7 +260,7 @@ header ul {
 }
 
 .find-form input {
-  width: 311px;  
+  width: 311px;
   padding-left: 15px;
 }
 
@@ -300,7 +300,79 @@ header ul {
   height: 155px;
 }
 
+.basket-form {
+  width: 540px;
+  height: 242px;
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+  padding: 20px 16px;
+  
+}
 
+.basket-table-row h3 {
+  font-weight: normal;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.basket-table span {
+  color: #999999;
+}
+
+.basket-table {
+  border-collapse: collapse;
+}
+
+.basket-table-caption {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+caption h3 {
+  font-size: 15px;
+}
+
+.basket-table-row {
+  valign: top;
+  padding-bottom: 20px;
+}
+
+.basket-table-row td:nth-child(1) {
+  width: 27px;
+}
+
+.basket-table-row td:nth-child(2) {
+  width: 47px;
+}
+
+.basket-table-row td:nth-child(3) {
+  width: 216px;
+}
+
+.basket-table-row td:nth-child(4) {
+  width: 124px;
+  text-align: right;
+}
+
+.basket-table-row td:nth-child(5) {
+  width: 78px;
+  text-align: right;
+}
+
+
+.basket-table .remove-button { /* The style is wrong!!!!!!!!!!!!!!!!!*/
+  width: 11px;
+  height: 11px;
+  line-height: 0;
+  font-size: 0;
+  background-image: url(../img/btn-cross-small.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+}
 /*----------------------------header-forms-end-------------------------*/
 
 /*----------header end-----------------------------------------------------*/
@@ -459,7 +531,7 @@ header ul {
   position: relative;
 }
 
-.features-item:before { 
+.features-item:before {
   position: absolute;
   display: block;
   content: "";
@@ -467,7 +539,7 @@ header ul {
   height: 49px;
 }
 
-.eco-standarts:before { 
+.eco-standarts:before {
   background-image: url(../img/icon-leaf.svg);
 }
 
@@ -546,7 +618,7 @@ header ul {
 .contacts-card {
   box-sizing: border-box;
   color: black;
-  font-size: 14px; 
+  font-size: 14px;
   line-height: 20px;
   width: 302px;
   height: 305px;
