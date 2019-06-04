@@ -45,8 +45,14 @@ body {
 .button.red-button:hover,
 .button.red-button:focus {
   box-shadow: 0px 2px 2px 0 #ac1000;
-  background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
 }
+
+.button.red-button:active {
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+}
+
 
 .button.gray-button:hover,
 .button.gray-button:focus {
@@ -116,9 +122,11 @@ header ul {
   background-color: #f6b5a5 ;
 }
 
-.submenu li a:active{
+/*
+.submenu li:active{
   background-color: #d07058;
 }
+*/
 
 .submenu li:first-child:hover,
 .submenu li:first-child:focus {
@@ -186,13 +194,14 @@ header ul {
   background-position: 16px 50%;
 }
 
-.user-menu .basket-button {
+.basket-button.empty-basket {
   background-image: url(../img/icon-basket-white.svg);
   background-position: 16px 50%;
 }
 
-.user-menu .basket-button:hover,
-.user-menu .basket-button:focus {
+.basket-button:hover,
+.basket-button:focus,
+.basket-button.basket-with-goods {
   background-image: url(../img/icon-basket-red.svg);
   background-position: 16px 50%;
 }
@@ -202,7 +211,7 @@ header ul {
   top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
 }
 
-.tel { 
+.tel {
   color: white;
   font-size: 22px;
   line-height: 24px;
@@ -268,43 +277,9 @@ header ul {
 .find-form input {
   width: 311px;
   padding-left: 15px;
+  height: 44px;
 }
 
-.feedback-form {
-  width: 478px;
-  padding: 20px 26px 27px 24px;
-  position: relative;
-}
-
-.feedback-form h3 {
-  color: black;
-  font-size: 24px;
-  line-height: 28px;
-  margin: 0;
-}
-
-.feedback-form .close-form-button {
-  position: absolute;
-  right: 26px;
-  display: block;
-  width: 18px;
-  height: 17px;
-  background-image: url(../img/btn-cross-small.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: transparent;
-}
-
-.feedback-form input {
-  width: 267px;
-  margin-top: 20px;
-}
-
-
-.feedback-form textarea {
-  width: 428px;
-  height: 155px;
-}
 
 .basket-form {
   width: 540px;
@@ -314,7 +289,7 @@ header ul {
   line-height: 16px;
   font-weight: normal;
   padding: 20px 16px;
-  
+
 }
 
 .basket-table-row h3 {
@@ -558,19 +533,19 @@ header ul {
   height: 49px;
 }
 
-.eco-standarts:before {
+.eco-standarts::before {
   background-image: url(../img/icon-leaf.svg);
 }
 
-.high-quality:before {
+.high-quality::before {
   background-image: url(../img/icon-cow.svg);
 }
 
-.features-item.we-owners:before {
+.features-item.we-owners::before {
   background-image: url(../img/icon-ice-cream.svg);
 }
 
-.features-item.preservation:before {
+.features-item.preservation::before {
   background-image: url(../img/icon-thermometer.svg);
 }
 /*----------features end---------------------------------------------------*/
@@ -735,3 +710,41 @@ footer .about-us-list {
   background-image: url(../img/icon-heart.svg);
 }
 /*----------footer-end--------------------------------------------------         ---------------------------------------------------*/
+/*--------------modal-forms-------------------------------------------------*/
+.feedback-form {
+  width: 478px;
+  padding: 20px 26px 27px 24px;
+  position: relative;
+}
+
+.feedback-form h3 {
+  color: black;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.feedback-form .close-form-button {
+  position: absolute;
+  right: 26px;
+  display: block;
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/btn-cross-small.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: transparent;
+}
+
+.feedback-form input {
+  width: 267px;
+  margin-top: 20px;
+}
+
+
+.feedback-form textarea {
+  width: 428px;
+  height: 155px;
+  margin-top: 20px;
+}
+/*------------------------------modal-forms-------------------------*/

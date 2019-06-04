@@ -37,58 +37,71 @@
           <a class=" button gray-button login-button" href="">Вход</a>
         </li>
         <li class="user-menu-item">
-          <a class="button gray-button basket-button" href="">Пусто</a>
+          <a class="button gray-button basket-button empty-basket" href="">Пусто</a>
         </li>
       </ul>
       <p class="work-time">С 10 до 20, ежедневно</p>
       <a class="tel" href="tel:+78124502525" aria-label="Наш телефон: ">
           <b>8 812 450-25-25</b>
       </a>
-      <form class="login-form header-form" action="index.html" method="post">
-        <input class="email" type="email" name="login" placeholder="Электронная почта" aria-label="Ваша электронная почта">
-        <input class="password" type="password" name="password" placeholder="Пароль" aria-label="Пароль">
+      <form class="login-form header-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="login">Логин: электронная почта</label>
+        <input class="email" type="email" name="login" id="login" placeholder="Электронная почта" required>
+        <label class="visually-hidden" for="password">Пароль, обязательно к заполнению</label>
+        <input class="password" type="password" name="password" id="password" placeholder="Пароль" required>
         <button class="button red-button" type="submit">Войти</button>
         <div class="login-links-wrapper">
-          <a class="i-forget-password" href="forget-password.html" aria-label="Восстановить пароль">Забыли пароль?</a>
+          <a class="i-forget-password" href="forget-password.html">Забыли пароль?</a>
           <a class="new-registration" href="new-registration.html">Новая регистрация</a>
         </div>
       </form>
-      <form class="find-form header-form" action="index.html" method="post">
-        <input type="text" placeholder="Что ищем?" aria-label="Что ищем?">
+      <form class="find-form header-form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="search">Что ищем?</label>
+        <input type="search" placeholder="Что ищем?" id="search" required>
+        <button type="submit">Найти!</button>
       </form>
-      <form class="feedback-form  header-form" action="index.html" method="post">
-        <h2 class="visually-hidden">Обратная связь</h2>
-        <button class="button close-form-button" type="button" name="button" aria-label="Закрыть окно формы обратной связи"></button>
-        <h3 aria-label="Напишите нам и...">Мы обязательно вам ответим!</h3>
-        <input class="name" type="text" aria-label="Как вас зовут?" placeholder="Как вас зовут?">
-        <input class="email" type="text" aria-label="Ваша почта для ответа?" placeholder="Ваша почта для ответа?">
-        <textarea class="message"  aria-label="Напишите что-нибудь..." placeholder="Напишите что-нибудь..."></textarea>
-        <button class="button red-button submit" type="submit" name="button">Отправить</button>
-      </form>
-      <form class="basket-form header-form" action="index.html" method="post">
+      <form class="basket-form header-form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Ваша корзина</h2>
           <table class="basket-table">
+            <caption class="basket-table-caption">
+              <h3 class="total-row">Итого: 750 руб.</h3>
+              <input name="basket-total" type="hidden" value="750 руб.">
+            </caption>
             <tr class="basket-table-row">
               <td><button class="remove-button" type="button"></button></td>
               <td><img src="img/product-crm-orange-citrus.jpg" alt="Пломбир с апельсиновым джемом"  width="33" height="33"></td>
-              <td><h3>Пломбир с апельсиновым джемом</h3></td>
-              <td><p class="quantity">1,5 кг х <span>200 руб.</span></p></td>
-              <td><p class="sum">300 руб.</p></td>
+              <td>
+                <h3>Пломбир с апельсиновым джемом</h3>
+                <input name="basket-item-name" type="hidden" value="Пломбир с апельсиновым джемом">
+              </td>
+              <td>
+                <p class="quantity">1,5 кг х <span>200 руб.</span></p>
+                <input name="basket-item-quantity" type="hidden" value="1,5 кг х 200 руб.">
+              </td>
+              <td>
+                <p class="sum">300 руб.</p>
+                <input name="basket-item-sum" type="hidden" value="300 руб.">
+              </td>
             </tr>
             <tr class="basket-table-row">
               <td><button class="remove-button" type="button"></button></td>
               <td><img src="img/product-crm-strawberries-chocolate.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"  width="33" height="33"></td>
-              <td><h3>Клубничный пломбир с присыпкой из белого шоколада</h3></td>
-              <td><p class="quantity">1,5 кг х <span>300 руб.</span></p></td>
-              <td><p class="sum">450 руб.</p></td>
+              <td>
+                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+                <input name="basket-item-name" type="hidden" value="Клубничный пломбир с присыпкой из белого шоколада">
+              </td>
+              <td>
+                <p class="quantity">1,5 кг х <span>300 руб.</span></p>
+                <input name="basket-item-quantity" type="hidden" value="1,5 кг х 300 руб.">
+              </td>
+              <td>
+                <p class="sum">450 руб.</p>
+                <input name="basket-item-sum" type="hidden" value="450 руб.">
+              </td>
             </tr>
-            <caption class="basket-table-caption">
-              <h3 class="total-row">Итого: 750 руб.</h3>
-            </caption>
 
           </table>
           <button class="button red-button" type="submit">Оформить заказ</button>
-
       </form>
     </header>
     <main>
@@ -215,11 +228,13 @@
           </article>
           <section class="subscription">
             <h2 class="visually-hidden">Форма для подписки на новости</h2>
-            <form class="form" action="index.html" method="post">
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
               <p> Подпишитесь на нашу рассылку и будете всегда в курсе
                   всего самого вкусного, что у нас происходит. Обещаем не спамить
                   и не слать всякой ненужной ерунды. Честно =)</p>
-              <input type="email" name="email"  placeholder="Электронная почта" value="">
+              <label class="visually-hidden">Электронная почта
+                <input type="email" name="email"  placeholder="Электронная почта" value="">
+              </label>
               <input type="button" name="submit-button" value="Отправить" class="button red-button">
             </form>
           </section>
@@ -258,7 +273,20 @@
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTLM Academy</a> © 2019</p>
     </footer>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <form class="feedback-form  header-form" action="https://echo.htmlacademy.ru" method="post">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <h3>Мы обязательно вам ответим!</h3>
+      <label class="visually-hidden" for="name">Как Вас зовут?</label>
+      <input class="name" type="text" id="name" placeholder="Как вас зовут?" name="name" required>
+      <label class="visually-hidden" for="email">Ваша почта для ответа?</label>
+      <input class="email" type="email" id="email" placeholder="Ваша почта для ответа?"name="email" required>
+      <label class="visually-hidden" for="message">Напишите что-нибудь...</label>
+      <textarea class="message" id="message" placeholder="Напишите что-нибудь..." name="message" required></textarea>
+      <button class="button red-button submit" type="submit" name="button">Отправить</button>
+      <label class="visually-hidden" for="close-form-button">Закрыть окно</label>
+      <button class="button close-form-button" type="button" id="close-form-button"></button>
+    </form>
 
+    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
   </body>
 </html>
