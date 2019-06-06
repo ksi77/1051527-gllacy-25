@@ -33,13 +33,13 @@ body {
 }
 
 .button.red-button {
+  border: 0;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border-radius: 20px;
   font-weight: bold;
   padding: 0 5%;
   height: 44px;
-
 }
 
 .button.red-button:hover,
@@ -53,12 +53,36 @@ body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
 }
 
+.gray-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  padding: 0 17px 0 16px;
+}
 
-.button.gray-button:hover,
-.button.gray-button:focus {
-  background-color: #f8f7f4;
+.gray-button:hover,
+.gray-button:focus-within {
+  background-color:  #f8f7f4;  
   color: black;
 }
+
+.gray-button .icon {
+  fill: white;
+  vertical-align: middle;
+}
+
+.icon .red-in-case {
+  fill: none;
+}
+
+.gray-button .icon:not(:last-child) {
+  margin-right: 6px;
+}
+
+.gray-button:hover .icon,
+.gray-button:focus-within .icon {
+  fill: black;
+}
+
 
 /*------header-----------------------------------------------------header--*/
 header ul {
@@ -81,11 +105,17 @@ header ul {
 }
 
 .main-navigation-item:hover > a,
-.main-navigation-item:focus > a  {
+.main-navigation-item > a:focus  {
   display: inline-block;
   border-radius: 20px;
   background-color: #f8f7f4;
   color: black;
+}
+
+.main-navigation-item .main-navigation-current{
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #d07058;
 }
 
 .main-navigation-item > a {
@@ -95,15 +125,27 @@ header ul {
   line-height: 32px;
   padding: 0 13px;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
 }
 
 .main-navigation-item .submenu {
   display: none;
 }
 
+.submenu a {
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.submenu-current a {
+  color: white;
+}
+
 .main-navigation-item:hover .submenu,
-.main-navigation-item:focus .submenu {
+.main-navigation-item:focus-within .submenu {
   display: table;
   margin-top: 5px;
   border-collapse: collapse;
@@ -114,7 +156,7 @@ header ul {
 }
 
 .submenu li:hover,
-.submenu li:focus {
+.submenu li:focus-within {
   background-color: #fbded8;
 }
 
@@ -122,11 +164,10 @@ header ul {
   background-color: #f6b5a5 ;
 }
 
-/*
-.submenu li:active{
+
+.submenu .submenu-current{
   background-color: #d07058;
 }
-*/
 
 .submenu li:first-child:hover,
 .submenu li:first-child:focus {
@@ -144,66 +185,39 @@ header ul {
   /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
 }
 
-.submenu a {
-  color: black;
-  text-decoration: none;
-  margin: 0 20px;
-  line-height: 28px;
-  font-size: 14px;
-}
-
 .user-menu {
   padding-top: 14px;
 }
 
 .user-menu .button {
-  padding-right: 17px;
-  padding-left: 45px;
   font-size: 14px;
   line-height: 33px;
-  text-align: right;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-repeat: no-repeat;
-  background-position: 16px 50%;
-  border-radius: 15px;
-  margin-left: 10px;
-}
+ }
 
 .user-menu .find-button {
   padding: 0;
+  text-align: center;
   width: 33px;
-  height: 33px;
+  height: 33px;  
   border-radius: 50%;
-  background-image: url(../img/icon-find.svg);
-  background-position: 8px 8px;
+ }
+
+.basket-button:hover .red-in-case,
+.basket-button:focus-within .red-in-case {
+  fill: #E84D37;
 }
 
-.find-button:hover,
-.find-button:focus {
-  background-image: url(../img/icon-find-hover.svg);
+.basket-with-goods .red-in-case  {
+  fill: #E84D37;
 }
 
-.user-menu .login-button {
-  background-image: url(../img/icon-login.svg);
-  background-position: 16px 50%;
+.basket-with-goods .icon {
+  fill: black;
 }
 
-.login-button:hover
-.login-button:focus {
-  background-image: url(../img/icon-login-hover.svg);
-  background-position: 16px 50%;
-}
-
-.basket-button.empty-basket {
-  background-image: url(../img/icon-basket-white.svg);
-  background-position: 16px 50%;
-}
-
-.basket-button:hover,
-.basket-button:focus,
-.basket-button.basket-with-goods {
-  background-image: url(../img/icon-basket-red.svg);
-  background-position: 16px 50%;
+.basket-with-goods {
+  /*color: black;
+  background-color:  #f8f7f4;  */
 }
 
 .work-time {
@@ -241,6 +255,7 @@ header ul {
 .header-form .button {
   height: 44px;
   font-size: 18px;
+  line-height: 44px;
 }
 
 .login-form {
@@ -393,7 +408,7 @@ header ul {
 .slider-switcher {
 }
 
-.slider-switcher .button {
+.slider-button {
   display: block;
   border: 3px solid white;
   border-radius: 50%;
@@ -402,6 +417,10 @@ header ul {
   margin-right: 8px;
   background-color: transparent;
 
+}
+.slider-button:hover,
+.slider-button:focus {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .slider .current-slide {
