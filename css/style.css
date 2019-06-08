@@ -36,10 +36,11 @@ body {
   border: 0;
   box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
   background-image: linear-gradient(to top, #e74a35, #f26843);
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: bold;
-  padding: 0 5%;
+  padding: 0 19px;
   height: 44px;
+  font-size: 18px;
 }
 
 .button.red-button:hover,
@@ -125,13 +126,12 @@ header ul {
   line-height: 32px;
   padding: 0 13px;
   text-decoration: none;
-  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
 }
 
 .main-navigation-item .submenu {
   display: none;
 }
-
+/*-------------------submenu--------------------------------*/
 .submenu a {
   color: black;
   text-decoration: none;
@@ -184,7 +184,8 @@ header ul {
   font-weight: bold;
   /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
 }
-
+/*-------------------submenu-end-------------------------------*/
+/*-------------------user-menu---------------------------------*/
 .user-menu {
   padding-top: 14px;
 }
@@ -192,6 +193,7 @@ header ul {
 .user-menu .button {
   font-size: 14px;
   line-height: 33px;
+  font-weight: 500;
  }
 
 .user-menu .find-button {
@@ -214,15 +216,13 @@ header ul {
 .basket-with-goods .icon {
   fill: black;
 }
-
-.basket-with-goods {
-  /*color: black;
-  background-color:  #f8f7f4;  */
-}
+/*-------------------user-menu-end--------------------------------*/
 
 .work-time {
   right: 15px;
-  top: 50px;/* !!!!!!!!!!!!!!!!!!!!!text style*/
+  font-size: 14px;
+  font-weight: bold;
+  top: 50px;
 }
 
 .tel {
@@ -230,6 +230,7 @@ header ul {
   font-size: 22px;
   line-height: 24px;
   text-decoration: none;
+  font-size: bold;
 }
 
 
@@ -245,9 +246,13 @@ header ul {
 
 .header-form input,
 .header-form textarea {
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
   box-sizing: border-box;
   line-height: 44px;
-  font-size: 14px;
+  font-size: inherit;
+  font-family: inherit;
   padding-left: 15px;
 }
 
@@ -368,6 +373,7 @@ header ul {
   line-height: 0;
   font-size: 0;
   padding: 0;
+  border: 0;
   background-image: url(../img/btn-cross-small.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -385,6 +391,29 @@ header ul {
 /*----------------------------header-forms-end-------------------------*/
 
 /*----------header end-----------------------------------------------------*/
+
+/*-------------------Inner-page----------------------------------------------------------*/
+.title-inner {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "»";
+  margin-left: 10px;
+}
+
+/*-------------------Inner-page-end---------------------------------------------------------*/
 
 /*----------special offer---------------------------------------------------*/
 .special-offer .slider-list {
@@ -490,19 +519,32 @@ header ul {
  .catalog-item {
    display: inline-block;
    margin-right: 25px;
- }
+}
 
  .catalog h3 {
-   width: 250px;
+   width: 255px;
    font-size: 16px;
    line-height: 22px;
    text-align: center;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
- }
+   font-weight: 500;
+}
 
- .catalog .button {
+.catalog .red-button {
+   box-sizing: border-box;
    line-height: 44px;
- }
+   width: 200px;
+   padding: 0;
+}
+
+ .catalog .price {
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.catalog span {
+  font-size: 30px;
+}
 /*----------hits offer end---------------------------------------------------*/
 
 /*----------features---------------------------------------------------*/
@@ -523,8 +565,9 @@ header ul {
 }
 
 .features h3 {
-  width: 1115px;
+  width: 1113px;
   font-size: 24px;
+  font-weight: 500;
   margin: 0;
   line-height: 1.25;
   padding: 0;
@@ -533,6 +576,7 @@ header ul {
 .features p {
   width: 475px;
   font-size: 16px;
+  font-weight: normal;
   line-height: 1.38;
   text-align: left;
   padding: 0 0 0 50px;
@@ -544,7 +588,7 @@ header ul {
   position: relative;
 }
 
-.features-item:before {
+.features-item::before {
   position: absolute;
   display: block;
   content: "";
@@ -586,30 +630,36 @@ header ul {
   border-radius: 20px;
 }
 
-.blog-news h3 {
-  text-decoration: underline;
-  width: 280px;
+.blog-news h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.38;
+  text-align: left;
+ }
+
+.blog-news h3 { 
+  width: 281px;
+  padding: 0;
   margin: 0;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.25;
   text-align: left;
 }
-
-.blog-news h2 {
-  font-size: 16px;
-  line-height: 1.38;
-  text-align: left;
- }
+.blog-news a{
+  color: #323232;
+  font-size: 24px;  
+  
+}
 
 .subscription {
-  box-sizing: border-box;;
+  box-sizing: border-box;
   display: block;
   padding-top: 5px;
   width: 560px;
   height: 220px;
   background-image: url(../img/bg-post-pattern.svg);
-  }
+}
 
 .subscription .form{
   display: block;
@@ -620,9 +670,22 @@ header ul {
   margin: 0 auto;
   margin-top: 5px;
   background-color: white;
-  padding: 20px
+  padding: 20px;
+  color: #5a5a5a;
+  font-size: 16px;
+  line-height: 22px;
 }
 
+.subscription input {
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 5px;
+  line-height: 44px;
+  border: 0;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+  width: 368px;
+  padding-left: 15px;
+}
 /*----------news-subscription-end---------------------------------------------------*/
 
 /*----------contacts---------------------------------------------------*/
@@ -667,7 +730,7 @@ header ul {
 .contacts-card .button {
   line-height: 45px;
   font-size: 18px;
-  padding: 0 28px;
+  padding: 0 27px;
   margin-top: 26px;
 }
 
@@ -679,16 +742,24 @@ header ul {
 /*----------footer---------------------------------------------------         ---------------------------------------------------*/
 footer a {
   color: white;
+  text-decoration: none;
 }
 
-footer .social-list {
+footer ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 footer .button {
+  box-sizing: border-box;
   width: 38px;
-  height: 38px;
-  opacity: 0.5;
+  height: 38px; 
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 footer .social{
@@ -697,7 +768,6 @@ footer .social{
 
 footer .tw {
   background-image: url(../img/icon-tw.svg);
-  background-repeat: no-repeat;
 }
 
 footer .insta {
@@ -716,17 +786,24 @@ footer .vk {
 }
 
 footer .about-us-list {
-  list-style: none;
+  position: relative;
+  font-size: 13px;
 }
 
-.for-suppliers:after {
+footer .copyright {
+  font-size: 12px;
+}
+
+.for-suppliers::before {
   position: absolute;
-  left: 400px;
-  top: -10px;
+  content: "";
   display: block;
+  left: -20px;
+  top: 4px;
   width: 20px;
   height: 20px;
   background-image: url(../img/icon-heart.svg);
+  background-repeat: no-repeat;
 }
 /*----------footer-end--------------------------------------------------         ---------------------------------------------------*/
 /*--------------modal-forms-------------------------------------------------*/
@@ -734,6 +811,7 @@ footer .about-us-list {
   width: 478px;
   padding: 20px 26px 27px 24px;
   position: relative;
+  font-size: 16px;
 }
 
 .feedback-form h3 {
@@ -758,6 +836,7 @@ footer .about-us-list {
 .feedback-form input {
   width: 267px;
   margin-top: 20px;
+
 }
 
 
