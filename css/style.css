@@ -562,6 +562,7 @@ header a {
 .features-list {
   display: flex;
   flex-wrap: wrap;
+ 
   list-style: none;
   margin: 0;
   padding: 0;
@@ -786,13 +787,9 @@ footer .button {
   border-radius: 50%;
   opacity: 0.8;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
   margin-right: 11px;
 }
 
-footer .social{
-  display: block;
-}
 
 footer .tw {
   background-image: url(../img/icon-tw.svg);
@@ -816,13 +813,13 @@ footer .vk {
 footer .about-us-list {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 370px;
+  height: 30px;
   font-size: 13px;
 }
 
 .about-us-item {
-  display: flex;
   margin-right: 32px;
 }
 
