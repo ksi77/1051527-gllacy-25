@@ -9,26 +9,17 @@ body {
 body > * > * > *   {
   background: rgba(255, 0, 0, 0.3);
  }
-
-/*
-body > * > * > * >* {
-  background: rgba(255, 255, 0, 0.3);
-}
-*/
-body > * > * > * {
-
-}
-
-
 .container {
   background: rgba(0, 0, 255,0.3);
+}
+
+/*-----------------------page grid-end---------------------------------*/
+
+.container {
   width: 1166px;
   padding: 0 10px;
   margin: 0 auto;
 }
-
-
-/*-----------------------page grid-end---------------------------------*/
 
 
 
@@ -183,6 +174,7 @@ header a {
 }
 /*-------------------submenu--------------------------------*/
 .submenu a {
+  display: block;
   color: black;
   text-decoration: none;
   margin: 0 20px;
@@ -196,14 +188,15 @@ header a {
 
 .main-navigation-item:hover .submenu,
 .main-navigation-item:focus-within .submenu {
-  display: table;
+  display: block;
   position: absolute;
-  margin-top: 5px;
+  z-index: 10;
   border-collapse: collapse;
   border-radius: 5px;
   background-color: #f8f7f4;
-  padding: 21px;
   color: black;
+  top: 30px; 
+  white-space: nowrap;
 }
 
 .submenu li:hover,
