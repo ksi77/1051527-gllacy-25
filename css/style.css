@@ -1,27 +1,43 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #849d8f;
-  /*background-image: url(../gllacy-index.jpg);*/
   color: white;
 }
 
 /*-----------------------page grid----------------------------------*/
-body > * > * > *   {
+/*body > * > * > *   {
   background: rgba(255, 0, 0, 0.3);
  }
+*/
 .container {
   background: rgba(0, 0, 255,0.3);
 }
+/*
+.pixelperfect.index-page {
+  margin: 0 auto;
+  padding: 0;
+  background-image: url(../gllacy-index.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 1200px;
+}
 
+.pixelperfect.gllacy-catalog {
+  margin: 0 auto;
+  padding: 0;
+  background-image: url(../gllacy-catalog.jpg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 1200px;  
+}
+*/
 /*-----------------------page grid-end---------------------------------*/
 
 .container {
-  width: 1166px;
-  padding: 0 10px;
+  width: 1146px; /*1166px*/
+  padding: 0 27px;/*0 10*/
   margin: 0 auto;
 }
-
-
 
 .visually-hidden {
   position: absolute;
@@ -35,7 +51,8 @@ body > * > * > *   {
 }
 
 .button {
-  display: inline-block;
+  display: block;
+  box-sizing: border-box;
   color: white;
   vertical-align: middle;
   text-align: center;
@@ -68,7 +85,7 @@ body > * > * > *   {
 .gray-button {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
-  padding: 0 17px 0 16px;
+  padding: 0 16px 0 16px;
 }
 
 .gray-button:hover,
@@ -87,7 +104,7 @@ body > * > * > *   {
 }
 
 .gray-button .icon:not(:last-child) {
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 .gray-button:hover .icon,
@@ -101,7 +118,7 @@ body > * > * > *   {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 13px;
+  padding-top: 9px;
 }
 
 .header-top {
@@ -131,6 +148,7 @@ header a {
 
 .main-navigation {
   display: flex;
+
 }
 
 .main-navigation-list {
@@ -141,20 +159,21 @@ header a {
 
 .main-navigation-item {
   position: relative;
-  margin-right: 1px;
+  display: block;
+  line-height: 32px;    
+  vertical-align: middle ;
+  margin-top: -4px;
 }
 
 .main-navigation-item:hover > a,
 .main-navigation-item > a:focus  {
-  display: inline-block;
   border-radius: 20px;
   background-color: #f8f7f4;
   color: black;
-  line-height: 32px;
 }
 
 .main-navigation-item .main-navigation-current{
-  display: inline-block;
+  display: block;
   border-radius: 20px;
   background-color: #d07058;
   line-height: 32px;
@@ -231,9 +250,10 @@ header a {
 /*-------------------submenu-end-------------------------------*/
 /*-------------------user-menu---------------------------------*/
 .user-menu {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: -4px;
 }
 
 .user-menu .button {
@@ -287,7 +307,7 @@ header a {
   line-height: 24px;
   text-decoration: none;
   font-size: bold;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 
 
@@ -298,25 +318,34 @@ header a {
 .title-inner {
   font-size: 35px;
   font-weight: bold;
+  line-height: 38px;
+  margin-top: 5px;
 }
 
 .breadcrumbs {
-  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 .breadcrumbs a{
   text-decoration: none;
   color: inherit;
   font-size: 14px;
-  padding-right: 3em;
+  line-height: 20px;
+}
+
+.breadcrumbs li {
+  position: relative;
+  padding-right: 21px;
 }
 
 .breadcrumbs li:not(:last-child)::after {
   content: "»";
+  position: absolute;
+  top: 0; 
+  right: 7px;
 }
 
 /*-------------------Inner-page-end---------------------------------------------------------*/
@@ -326,8 +355,7 @@ header a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
-  margin-bottom: 41px;
+  margin-top: 10px;
 }
 
 .special-offer .slider-list {
@@ -343,12 +371,10 @@ header a {
 .slider-item img {
   position: absolute;
   margin: auto;
-  bottom: -297px;
-  left: 7%;
+  top: 0;
+  left: 50%;
+  margin-left: -523px;
   z-index: -5;
-  /*background-color: black;*/
-
-
 }
 
 .slider-item h3 {
@@ -358,16 +384,17 @@ header a {
   font-size: 60px;
   width: 670px;
   line-height: 60.5px;
-  padding-top: 262px;
+  padding-top: 266px;
 }
 
 .slider-item .button {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 32px;
   font-size: 32px;
   line-height: 64px;
   font-weight: bold;
   height: 64px;
-  margin: auto;
-  margin-top: 26px;
  }
 
 .slider-button {
@@ -380,6 +407,7 @@ header a {
   background-color: transparent;
 
 }
+
 .slider-button:hover,
 .slider-button:focus {
   background-color: rgba(255, 255, 255, 0.4);
@@ -392,8 +420,7 @@ header a {
 .slaider-switcher {
   display: flex;
   position: absolute;
-  bottom: 20px;
-  left: 17px;
+  top: 564px;
 }
 
 /*----------special-offer end---------------------------------------------------*/
@@ -401,7 +428,7 @@ header a {
 /*----------bonus-offer---------------------------------------------------*/
 
 .bonus-offer {
-  margin-bottom: 40px;
+  margin-top: 41px;
 }
 
 
@@ -424,7 +451,8 @@ header a {
  width: 560px;
  height: 229px;
  border-radius: 20px;
- padding: 20px;
+ padding-left: 18px;
+ padding-top: 14px;
 }
 
 .bonus-offer-item1  {
@@ -449,9 +477,12 @@ header a {
 }
 
 .bonus-offer .button {
- margin: 20px;
+ margin-top: 29px;
+ margin-right: 22px;
  line-height: 45px;
  float: right;
+ padding-left: 22px;
+ padding-right: 21px;
  }
 
 /*----------bonus-offer-end--------------------------------------------------*/
@@ -459,7 +490,7 @@ header a {
 /*----------hits offer---------------------------------------------------*/
 
 .catalog {
-  margin-bottom: 38px;
+  margin-top: 38px;
 }
 
 .catalog-list {
@@ -471,8 +502,16 @@ header a {
   list-style: none;
 }
 
-.catalog .is-hit{
+.catalog-list article {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.hit-offer .is-hit{
   display: block;
+  position: absolute;
+  margin: 0;
   width: 61px;
   height: 61px;
   background-image: url(../img/mark-hit.svg);
@@ -483,24 +522,39 @@ header a {
  border-radius: 50%;
 }
 
- 
-
  .catalog h3 {
    width: 255px;
    font-size: 16px;
+   margin: 0;
+   margin-top: 12px;
    line-height: 22px;
    text-align: center;
    font-weight: 500;
+   align-self: center;
+   order: 3;
 }
 
 .catalog .red-button {
+   display: none;
    box-sizing: border-box;
    line-height: 44px;
    width: 200px;
    padding: 0;
+   align-self: center;
+   margin-top: 0;
+   margin-bottom: 22px;
+   order: 4;
+}
+
+.calalog article:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
  .catalog .price {
+  position: absolute;
+  top:206px;
+  margin: 0;
+  padding: 0;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   font-size: 45px;
   font-weight: bold;
@@ -509,14 +563,18 @@ header a {
 .catalog span {
   font-size: 30px;
 }
+
 .catalog .paginator {
   display: flex;
   justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .paginator .current-page  {
+  display: block;
   color: black;
-  display: inline-block;
   border-radius: 50%;
   width: 27px;
   height: 27px;
@@ -536,9 +594,8 @@ header a {
 
 /*----------features---------------------------------------------------*/
 .features {
-  margin-bottom: 40px;
+  margin-top: 35px;
 }
-
 
 .features {
   display: block;
@@ -548,36 +605,43 @@ header a {
 .features-wrapper {
   background-image: url(../img/bg-wafer.jpg);
   background-color: #EBDFC3;
-  border-radius: 30px;
-  padding: 20px;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-top:  20px;
+  padding-right: 20px;
+  padding-bottom: 2px;
+}
+
+.features h3 {
+  width: 1130px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 0;
+  line-height: 1.25;
+  padding: 0;
 }
 
 .features-list {
   display: flex;
   flex-wrap: wrap;
- 
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.features h3 {
-  width: 1113px;
-  font-size: 24px;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.25;
-  padding: 0;
+  margin-top: 23px;
 }
 
 .features p {
-  width: 475px;
+  display: block;
+  width: 485px;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.38;
   text-align: left;
-  padding: 0 0 0 50px;
-  margin: 28px 0 0 0;
+  padding-left: 56px;
+  margin-top: 0;
+  margin-bottom: 23px;
 }
 
 .features-item {
@@ -591,6 +655,8 @@ header a {
   content: "";
   width: 49px;
   height: 49px;
+  background-image: url(../img/icon-heart.svg);
+  top: -14px;
 }
 
 .eco-standarts::before {
@@ -613,25 +679,25 @@ header a {
 /*----------news-subscription---------------------------------------------------*/
 .news-subscription {
   display: flex;
+  margin-top: 40px;
   justify-content: space-between;
-  margin-bottom: 39px;
 }
 
 
 .news-subscription {
-
   color: black;
 }
 
 .blog-news {
   display: block;
-
-  width: 520px;
-  height: 180px;
-  padding: 20px;
+  box-sizing: border-box;
+  width: 560px;
+  height: 220px;
+  padding-left: 19px;
+  padding-top: 23px;
   background-color: white;
   background-image: url(../img/bg-blog-news.jpg);
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .blog-news h2 {
@@ -639,6 +705,8 @@ header a {
   font-weight: 500;
   line-height: 1.38;
   text-align: left;
+  margin: 0;
+  margin-bottom: 5px;
  }
 
 .blog-news h3 {
@@ -653,12 +721,11 @@ header a {
 .blog-news a{
   color: #323232;
   font-size: 24px;
-
 }
 
 .subscription {
-  box-sizing: border-box;
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   width: 560px;
   height: 220px;
@@ -666,20 +733,36 @@ header a {
 }
 
 .subscription .form{
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: space-between;
+  justify-content: space-between;
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 549px;
   height: 211px;
   margin: 0 auto;
   background-color: white;
-  padding: 20px;
+  padding-left: 20px;
+  padding-top: 19px;
+  padding-right: 20px;
+  padding-bottom: 35px;
   color: #5a5a5a;
   font-size: 16px;
   line-height: 22px;
+  padding-top: 30px;
+}
+
+.subscription p {
+  margin: 0;
+  padding: 0;
+  width: 506px;
 }
 
 .subscription input {
+  margin: 0;
+  box-sizing: border-box;
   font-size: inherit;
   font-family: inherit;
   border-radius: 5px;
@@ -687,8 +770,10 @@ header a {
   border: 0;
   border: 1px solid rgba(178, 178, 178, 0.52);
   width: 368px;
+  height: 44px;
   padding-left: 15px;
 }
+
 /*----------news-subscription-end---------------------------------------------------*/
 
 /*----------contacts---------------------------------------------------*/
@@ -696,7 +781,7 @@ header a {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 18px;
+  margin-top: 40px;
 }
 
 .contacts .map {
@@ -704,7 +789,8 @@ header a {
    z-index: -5;
    display: block;
    width: 1302px;
-   left: -5%;
+   left: 50%;
+   margin-left: -651px;
  }
 
 .contacts-card {
@@ -715,33 +801,40 @@ header a {
   width: 302px;
   height: 305px;
   background-color: white;
-  border-radius: 20px;
-  padding: 32px 25px;
-  margin: 63px 0;
+  border-radius: 15px;
+  padding: 28px 25px;
+  margin: 62px 0;
 }
 
 .contacts-item1 {
   margin: 0;
   width: 148px;
-}
-
-.contacts-working-time {
-  margin: 0;
+  padding: 0;
 }
 
 .contacts-item2 {
   margin-bottom: 0;
+  margin-top: 17px;
 }
+
 
 .contacts-address,
 .contacts-tel {
-  margin: 0;
+  margin-top: 1px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  width: 220px;
+  width: 230px;
   color: black;
   text-decoration: none;
+}
+
+.contacts-tel {
+  line-height: 30px;
+}
+
+.contacts-working-time {
+  margin: 0;
 }
 
 .contacts-card .button {
@@ -751,25 +844,42 @@ header a {
   margin-top: 26px;
 }
 
-
 /*----------contacts-end---------------------------------------------------end---------------------------------------------------*/
 
-/*----------footer---------------------------------------------------         ---------------------------------------------------*/
-footer {
+/*----------------------footer---------------------------------------------------         ---------------------------------------*/
+
+footer.container {
   display: flex;
+  margin-top: 18px;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 23px;
 }
+
 footer a {
   color: white;
   text-decoration: none;
+  font-size: 13px;
 }
 
-footer ul {
+footer .social-list {
   display: flex;
   list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0; 
+  margin-right: 34px;
+  margin-top: 10px;
+}
+
+footer .about-us-list {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+footer .about-us-navigation {
+  display: flex;
 }
 
 footer .button {
@@ -803,43 +913,41 @@ footer .vk {
   background-repeat: no-repeat;
 }
 
-footer .about-us-list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 30px;
-  font-size: 13px;
+.about-us-navigation {
+  margin-top: 8px;
 }
-
-.about-us-item {
+.about-us-navigation .column {
   margin-right: 32px;
+}
+.about-us-item {
+  position: relative;
+
 }
 
 .for-suppliers::before {
   position: absolute;
   content: "";
   display: block;
-  left: -20px;
-  top: 4px;
+  left: -22px;
+  top: 3px;
   width: 20px;
   height: 20px;
   background-image: url(../img/icon-heart.svg);
   background-repeat: no-repeat;
 }
 
-
 footer .copyright {
   margin: 0;
-  margin-top: 5px;
+  margin-top: 0;
   font-size: 12px;
   line-height: 18px;
-  padding-bottom: 23px;
 }
+
 /*----------footer-end--------------------------------------------------         ---------------------------------------------------*/
 
 /*--------------modal-forms-------------------------------------------------*/
 .feedback-form {
+  display: none;
   width: 478px;
   padding: 20px 26px 27px 24px;
   position: relative;
@@ -870,15 +978,14 @@ footer .copyright {
 .feedback-form input {
   width: 267px;
   margin-top: 20px;
-
 }
-
 
 .feedback-form textarea {
   width: 428px;
   height: 155px;
   margin-top: 20px;
 }
+
 /*------------------------------modal-forms-end-----------------------*/
 /*-----------------header-forms---------------------------------------------*/
 
