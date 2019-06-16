@@ -12,7 +12,7 @@ body > * > * > * > *  {
 .container {
   background: rgba(0, 0, 255,0.3);
 }
-/*
+
 .pixelperfect.index-page {
   margin: 0 auto;
   padding: 0;
@@ -21,7 +21,7 @@ body > * > * > * > *  {
   background-position: 0 0;
   width: 1200px;
 }
-
+/*
 .pixelperfect.gllacy-catalog {
   margin: 0 auto;
   padding: 0;
@@ -342,7 +342,7 @@ header a {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-  content: "Ã‚Â»";
+  content: "Ãƒâ€šÃ‚Â»";
   position: absolute;
   top: 0; 
   right: 7px;
@@ -601,7 +601,7 @@ header a {
 
 /*----------features---------------------------------------------------*/
 .features {
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .features {
@@ -616,7 +616,7 @@ header a {
   padding-left: 20px;
   padding-top:  20px;
   padding-right: 20px;
-  padding-bottom: 2px;
+  padding-bottom: 15px;
 }
 
 .features h3 {
@@ -636,24 +636,25 @@ header a {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 23px;
-}
-
-.features p {
-  display: block;
-  width: 485px;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.38;
-  text-align: left;
-  padding-left: 56px;
-  margin-top: 0;
-  margin-bottom: 23px;
+  margin-top: 7px;
 }
 
 .features-item {
   margin-right: 0;
   position: relative;
+  padding-left: 56px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 14px;
+}
+
+.features p {
+  margin: 0;
+  width: 485px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.38;
+  text-align: left;
 }
 
 .features-item::before {
@@ -663,7 +664,8 @@ header a {
   width: 49px;
   height: 49px;
   background-image: url(../img/icon-heart.svg);
-  top: -14px;
+  top: 1px;
+  left: 1px;
 }
 
 .eco-standarts::before {
