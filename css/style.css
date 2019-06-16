@@ -5,10 +5,10 @@ body {
 }
 
 /*-----------------------page grid----------------------------------*/
-/*body > * > * > *   {
+body > * > * > * > *  {
   background: rgba(255, 0, 0, 0.3);
  }
-*/
+
 .container {
   background: rgba(0, 0, 255,0.3);
 }
@@ -342,7 +342,7 @@ header a {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-  content: "»";
+  content: "Ã‚Â»";
   position: absolute;
   top: 0; 
   right: 7px;
@@ -496,16 +496,27 @@ header a {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.catalog-item {
+  margin-right: 26px;
+}
+
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-list article {
   display: flex;
   position: relative;
   flex-direction: column;
+}
+
+.calalog article:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hit-offer .is-hit{
@@ -544,10 +555,6 @@ header a {
    margin-top: 0;
    margin-bottom: 22px;
    order: 4;
-}
-
-.calalog article:hover {
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
  .catalog .price {
