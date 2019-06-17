@@ -13,14 +13,14 @@ body > * > * > * > *  {
   background: rgba(0, 0, 255,0.3);
 }
 
-.pixelperfect.index-page {
+/* .pixelperfect.index-page {
   margin: 0 auto;
   padding: 0;
   background-image: url(../gllacy-index.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 1200px;
-}
+} */
 /*
 .pixelperfect.gllacy-catalog {
   margin: 0 auto;
@@ -28,7 +28,7 @@ body > * > * > * > *  {
   background-image: url(../gllacy-catalog.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
-  width: 1200px;  
+  width: 1200px;
 }
 */
 /*-----------------------page grid-end---------------------------------*/
@@ -160,9 +160,9 @@ header a {
 .main-navigation-item {
   position: relative;
   display: block;
-  line-height: 32px;    
+  line-height: 32px;
   vertical-align: middle ;
-  margin-top: -4px;
+  margin-top: -4px;  
 }
 
 .main-navigation-item:hover > a,
@@ -185,7 +185,8 @@ header a {
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  padding: 0 14px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .main-navigation-item .submenu {
@@ -205,7 +206,18 @@ header a {
   color: white;
 }
 
-.main-navigation-item:hover .submenu,
+.main-navigation-item:hover .submenu{
+  display: block;
+  position: absolute;
+  z-index: 10;
+  border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  color: black;
+  top: 35px;
+  white-space: nowrap;
+}
+
 .main-navigation-item:focus-within .submenu {
   display: block;
   position: absolute;
@@ -214,11 +226,24 @@ header a {
   border-radius: 5px;
   background-color: #f8f7f4;
   color: black;
-  top: 30px; 
+  top: 35px;
   white-space: nowrap;
 }
 
-.submenu li:hover,
+.submenu::before {
+  display: block;
+  position: absolute;
+  z-index: 7;
+  content: "";
+  width: 100%;
+  height: 5px;
+  top: -5px;
+}
+
+.submenu li:hover {
+  background-color: #fbded8;
+}
+
 .submenu li:focus-within {
   background-color: #fbded8;
 }
@@ -245,21 +270,21 @@ header a {
 
 .submenu li:first-child {
   font-weight: bold;
-  /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
 }
+
 /*-------------------submenu-end-------------------------------*/
 /*-------------------user-menu---------------------------------*/
 .user-menu {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-top: -4px;
+  margin-left: auto
 }
 
 .user-menu .button {
   font-size: 14px;
   line-height: 33px;
   font-weight: 500;
+  margin-top: -4px;
  }
 
 .user-menu-item:not(:last-child) {
@@ -342,9 +367,9 @@ header a {
 }
 
 .breadcrumbs li:not(:last-child)::after {
-  content: "Ãƒâ€šÃ‚Â»";
+  content: "Â»";
   position: absolute;
-  top: 0; 
+  top: 0;
   right: 7px;
 }
 
@@ -382,7 +407,7 @@ header a {
   margin: auto;
   font-weight: bold;
   font-size: 60px;
-  width: 670px;
+  width: 675px;
   line-height: 60.5px;
   padding-top: 266px;
 }
@@ -515,7 +540,7 @@ header a {
   flex-direction: column;
 }
 
-.calalog article:hover {
+.catalog article:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -788,18 +813,21 @@ header a {
 /*----------contacts---------------------------------------------------*/
 .contacts {
   position: relative;
-  display: flex;
-  justify-content: flex-end;
   margin-top: 40px;
 }
 
-.contacts .map {
-   position: absolute;
-   z-index: -5;
-   display: block;
-   width: 1302px;
-   left: 50%;
-   margin-left: -651px;
+.contacts-map {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
+
+ }
+
+.contacts .container {
+  display: flex;
+  justify-content: flex-end;
  }
 
 .contacts-card {
@@ -812,7 +840,8 @@ header a {
   background-color: white;
   border-radius: 15px;
   padding: 28px 25px;
-  margin: 62px 0;
+  margin-top: 62px;
+  margin-bottom: 63px;
 }
 
 .contacts-item1 {
@@ -876,7 +905,7 @@ footer .social-list {
   list-style: none;
   align-items: center;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   margin-right: 34px;
   margin-top: 10px;
 }
