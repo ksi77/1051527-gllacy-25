@@ -88,7 +88,11 @@ body > * > * > * > *  {
   padding: 0 16px 0 16px;
 }
 
-.gray-button:hover,
+.gray-button:hover {
+  background-color:  #f8f7f4;
+  color: black;
+}
+
 .gray-button:focus-within {
   background-color:  #f8f7f4;
   color: black;
@@ -107,7 +111,10 @@ body > * > * > * > *  {
   margin-right: 4px;
 }
 
-.gray-button:hover .icon,
+.gray-button:hover .icon {
+  fill: black;
+}
+
 .gray-button:focus-within .icon {
   fill: black;
 }
@@ -162,7 +169,7 @@ header a {
   display: block;
   line-height: 32px;
   vertical-align: middle ;
-  margin-top: -4px;  
+  margin-top: -4px;
 }
 
 .main-navigation-item:hover > a,
@@ -299,7 +306,10 @@ header a {
   border-radius: 50%;
  }
 
-.basket-button:hover .red-in-case,
+.basket-button:hover .red-in-case {
+  fill: #E84D37;
+}
+
 .basket-button:focus-within .red-in-case {
   fill: #E84D37;
 }
