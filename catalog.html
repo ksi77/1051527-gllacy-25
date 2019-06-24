@@ -57,6 +57,17 @@
             </svg>
             <span>Вход</span>
           </a>
+          <form class="login-form header-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="login">Логин: электронная почта</label>
+            <input class="email" type="email" name="login" id="login" placeholder="Электронная почта" required>
+            <label class="visually-hidden" for="password">Пароль, обязательно к заполнению</label>
+            <input class="password" type="password" name="password" id="password" placeholder="Пароль" required>
+            <button class="button red-button" type="submit">Войти</button>
+            <div class="login-links-wrapper">
+              <a class="i-forget-password" href="forget-password.html">Забыли пароль?</a>
+              <a class="new-registration" href="new-registration.html">Новая регистрация</a>
+            </div>
+          </form>
         </li>
         <li class="user-menu-item">
           <a class="button gray-button basket-button basket-with-goods" href="">
@@ -315,19 +326,8 @@
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTLM Academy</a> © 2019</p>
     </div>
   </footer>
-  <section class="forms container">
-    <form class="login-form header-form" action="https://echo.htmlacademy.ru" method="post">
-    <label class="visually-hidden" for="login">Логин: электронная почта</label>
-    <input class="email" type="email" name="login" id="login" placeholder="Электронная почта" required>
-    <label class="visually-hidden" for="password">Пароль, обязательно к заполнению</label>
-    <input class="password" type="password" name="password" id="password" placeholder="Пароль" required>
-    <button class="button red-button" type="submit">Войти</button>
-    <div class="login-links-wrapper">
-      <a class="i-forget-password" href="forget-password.html">Забыли пароль?</a>
-      <a class="new-registration" href="new-registration.html">Новая регистрация</a>
-    </div>
-  </form>
-  </section>
+
+
 </div>
 </body>
 </html>

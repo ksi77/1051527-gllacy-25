@@ -5,15 +5,16 @@ body {
 }
 
 /*-----------------------page grid----------------------------------*/
-/*
-body > * > * > * > *  {
+
+/*body > * > * > * > *  {
   background: rgba(255, 0, 0, 0.3);
  }
 
 .container {
  background: rgba(0, 0, 255,0.3);
 }
-
+*/
+/*
 .pixelperfect.index-page {
   margin: 0 auto;
   padding: 0;
@@ -32,9 +33,13 @@ body > * > * > * > *  {
   background-position: 0 0;
   width: 1200px;
 }
-
 */
+
 /*-----------------------page grid-end---------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .container {
   width: 1146px; /*1166px*/
@@ -42,7 +47,9 @@ body > * > * > * > *  {
   margin: 0 auto;
 }
 
-.visually-hidden {
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -115,9 +122,6 @@ body > * > * > * > *  {
   fill: black;
 }
 
-.gray-interactive {
-
-}
 
 /*------header-----------------------------------------------------header--*/
 .main-header {
@@ -135,19 +139,6 @@ body > * > * > * > *  {
   display: flex;
 }
 
-header ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header a {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
 .logo {
   margin: 0;
   margin-right: 10px;
@@ -155,21 +146,20 @@ header a {
 
 .main-navigation {
   display: flex;
-
 }
 
 .main-navigation-list {
   display: flex;
-  width: 700px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 600px;
   align-items: center;
 }
 
 .main-navigation-item {
   position: relative;
-  display: block;
-  line-height: 32px;
-  vertical-align: middle ;
-  margin-top: -4px;
+  margin-top: -7px;
 }
 
 .main-navigation-item:hover > a,
@@ -188,6 +178,9 @@ header a {
 
 .main-navigation-item > a {
   position: relative;
+  display: block;
+  line-height: 32px;
+  vertical-align: middle ;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -196,10 +189,23 @@ header a {
   padding-right: 14px;
 }
 
+/*-------------------submenu--------------------------------*/
 .main-navigation-item .submenu {
   display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: absolute;
+  z-index: 10;
+  border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #f8f7f4;
+  color: black;
+  top: 38px;
+  white-space: nowrap; 
 }
-/*-------------------submenu--------------------------------*/
+
 .submenu a {
   display: block;
   color: black;
@@ -213,28 +219,12 @@ header a {
   color: white;
 }
 
-.main-navigation-item:hover .submenu{
+.main-navigation-item:hover .submenu {
   display: block;
-  position: absolute;
-  z-index: 10;
-  border-collapse: collapse;
-  border-radius: 5px;
-  background-color: #f8f7f4;
-  color: black;
-  top: 35px;
-  white-space: nowrap;
 }
 
 .main-navigation-item:focus-within .submenu {
   display: block;
-  position: absolute;
-  z-index: 10;
-  border-collapse: collapse;
-  border-radius: 5px;
-  background-color: #f8f7f4;
-  color: black;
-  top: 35px;
-  white-space: nowrap;
 }
 
 .submenu::before {
@@ -243,8 +233,8 @@ header a {
   z-index: 7;
   content: "";
   width: 100%;
-  height: 5px;
-  top: -5px;
+  height: 10px;
+  top: -10px;
 }
 
 .submenu li:hover,
@@ -289,8 +279,15 @@ header a {
 
 /*-------------------submenu-end-------------------------------*/
 /*-------------------user-menu---------------------------------*/
+
 .user-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   display: flex;
+  width: 300px;
+  justify-content: flex-end;
   align-items: center;
   margin-left: auto
 }
@@ -299,7 +296,7 @@ header a {
   font-size: 14px;
   line-height: 33px;
   font-weight: 500;
-  margin-top: -4px;
+  margin-top: -10px;
  }
 
 .user-menu-item {
@@ -321,13 +318,31 @@ header a {
 .find-form {
   display: none;
   position: absolute;
-  top: 35px;
+  top: 30px;
   right: 0px;
  }
 
 .find-button:hover ~ .find-form,
-.find-button:focus ~ .find-form {
-  display: block;
+.find-button:focus ~ .find-form,
+.find-form:hover,
+.find-form:focus {
+  display: flex;
+}
+
+
+.login-form {
+  display: none;
+  position: absolute;
+  z-index: 6;
+  top: 30px;
+  right: 0px;
+ }
+
+.login-button:hover ~ .login-form,
+.login-button:focus ~ .login-form,
+.login-form:hover,
+.login-form:focus {
+  display: flex;
 }
 
 .basket-button:hover .red-in-case,
@@ -342,6 +357,7 @@ header a {
 .basket-with-goods .icon {
   fill: black;
 }
+
 .basket-form {
   position: absolute;
   display: none;
@@ -350,14 +366,17 @@ header a {
 }
 
 .basket-with-goods:hover ~ .basket-form,
-.basket-with-goods:focus ~ .basket-form  {
+.basket-with-goods:focus ~ .basket-form,
+.basket-form:hover  {
   display: block;
 }
 /*-------------------user-menu-end--------------------------------*/
 
 .work-time {
+  margin: 0;
+  padding: 0;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 15px;
   font-weight: bold;
   text-align: right;
   margin-left: auto;
@@ -374,7 +393,6 @@ header a {
   line-height: 24px;
   text-decoration: none;
   font-size: bold;
-  margin-top: 3px;
 }
 
 
@@ -390,6 +408,7 @@ header a {
 }
 
 .breadcrumbs {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -420,9 +439,10 @@ header a {
   top: 0;
   right: 7px;
 }
+
 /*----------------------------------filters-form--------------------------------------------*/
 .filters-form {
-    margin-top: 14px;
+    margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -774,11 +794,11 @@ header a {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: -40px;
+  margin-top: -38px;
   }
 
 .catalog-item {
-  margin-top: 40px;
+  margin-top: 38px;
   margin-right: 26px;
   position: relative;
 }
@@ -797,6 +817,7 @@ header a {
   display: block;
   content: "";
   position: absolute;
+  top: -6px;
   left: 50%;
   margin-left: -147px;
   z-index: 3;
@@ -832,7 +853,7 @@ header a {
    font-size: 16px;
    z-index: 4;
    margin: 0;
-   margin-top: 12px;
+   margin-top: 15px;
    line-height: 22px;
    text-align: center;
    font-weight: 500;
@@ -860,7 +881,7 @@ header a {
  .catalog .price {
   position: absolute;
   z-index: 4;
-  top:206px;
+  top: 209px;
   margin: 0;
   padding: 0;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
@@ -879,7 +900,7 @@ header a {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: 85px;
+  margin-top: 80px;
   padding-bottom: 30px;
 }
 
@@ -949,7 +970,7 @@ header a {
 
 /*----------features---------------------------------------------------*/
 .features {
-  margin-top: 40px;
+  margin-top: 39px;
 }
 
 .features {
@@ -958,13 +979,13 @@ header a {
 }
 
 .features-wrapper {
-  background-image: url(../img/bg-wafer.jpg);
+ /* background-image: url(../img/bg-wafer.jpg);
   background-color: #EBDFC3;
-  border-radius: 15px;
+ */ border-radius: 15px;
   padding-left: 20px;
   padding-top:  20px;
   padding-right: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
 }
 
 .features h3 {
@@ -984,7 +1005,7 @@ header a {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .features-item {
@@ -1268,31 +1289,28 @@ footer .button-social:active {
   opacity: 0.7;
 }
 
-
-
-
 footer .tw {
   background-image: url(../img/icon-tw.svg);
   background-repeat: no-repeat;
-  background-position: 0 -1px;
+  background-position: -1px 0;
 }
 
 footer .insta {
   background-image: url(../img/icon-insta.svg);
   background-repeat: no-repeat;
-  background-position: 0 -1px;
+  background-position: -1px 0;
 }
 
 footer .fb {
   background-image: url(../img/icon-fb.svg);
   background-repeat: no-repeat;
-  background-position: 0 -1px;
+  background-position: -1px 0;
 }
 
 footer .vk {
   background-image: url(../img/icon-vk.svg);
   background-repeat: no-repeat;
-  background-position: 0 -1px;
+  background-position: -1px 0;
 }
 
 .about-us-navigation {
@@ -1384,6 +1402,17 @@ footer .copyright {
   margin-bottom: 430px;
 }
 
+.header-form::before {
+  display: block;
+  position: absolute;
+  z-index: 7;
+  content: "";
+  width: 100%;
+  height: 15px;
+  top: -15px;
+}
+
+
 .header-form input,
 .header-form textarea {
   border: 0;
@@ -1396,6 +1425,10 @@ footer .copyright {
   padding-left: 15px;
 }
 
+.header-form input:,
+.header-form textarea:active {
+  font-weight: bold;
+}
 
 .header-form .button {
   height: 44px;
@@ -1404,7 +1437,6 @@ footer .copyright {
 }
 
 .login-form {
-  display: flex;
   flex-wrap: wrap;
   width: 277px;
   padding: 20px 17px 22px 19px;
