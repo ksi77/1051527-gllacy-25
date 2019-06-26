@@ -9,8 +9,7 @@
   </head>
 
 <body  class="catalog-page">
-
-<div class="pixelperfect gllacy-catalog"><!--Убрать-->
+<div class="pixelperfect gllacy-catalog">
 
   <header class="main-header container">
     <div class="header-top">
@@ -136,31 +135,33 @@
         </div>
         <div class="filters-item">
           <div class="filter-items-label">Цена: 100 руб. – 500 руб.</div>
-          <div class="filters-price-range  filters-platform">
+          <div class="filters-price filters-platform">
             <div class="filters-price-scale">
-              <div class="filters-range-bar"></div>
+              <input type="hidden" name="min-price" value="100">
+              <input type="hidden" name="max-price" value="500">
+              <div class="filters-price-range"></div>
+              <div class="filters-price-toggle toggle-min" tabindex="0" aria-label="Тумблер минимальной цены"></div>
+              <div class="filters-price-toggle toggle-max" tabindex="0" aria-label="Тумблер максимальной цены"></div>
             </div>
-            <div class="filters-price-toggle toggle-min" tabindex="0"></div>
-            <div class="filters-price-toggle toggle-max" tabindex="0"></div>
           </div>
         </div>
         <div class="filters-item">
           <div class="filter-items-label">Жирность:</div>
           <ul class="filters-list filters-platform filters-fats">
             <li class="filters-option">
-              <input class="radio visually-hidden" id="filter-fats-zero" type="radio" name="fats" value="zero">
+              <input class="radio visually-hidden" id="filter-fats-zero" tabindex="0" type="radio" name="fats" value="zero">
               <label class="filters-label non-standart-radio" for="filter-fats-zero">0%</label>
             </li>
             <li class="filters-option">
-              <input class="radio visually-hidden" id="filter-fats-low" type="radio" name="fats" value="low" checked>
+              <input class="radio visually-hidden" id="filter-fats-low" tabindex="0" type="radio" name="fats" value="low" checked>
               <label class="filters-label non-standart-radio" for="filter-fats-low">до 10%</label>
             </li>
             <li class="filters-option">
-              <input class="radio visually-hidden" id="filter-fats-middle" type="radio" name="fats" value="middle">
+              <input class="radio visually-hidden" id="filter-fats-middle" tabindex="0" type="radio" name="fats" value="middle">
               <label class="filters-label non-standart-radio" for="filter-fats-middle">до 30%</label>
             </li>
             <li class="filters-option">
-              <input class="radio visually-hidden" id="filter-fats-high" type="radio" name="fats" value="high">
+              <input class="radio visually-hidden" id="filter-fats-high"  tabindex="0" type="radio" name="fats" value="high">
               <label class="filters-label non-standart-radio" for="filter-fats-high">выше 30%</label>
             </li>
           </ul>
@@ -294,7 +295,7 @@
         </li>
     </ul>
       <ul class="paginator">
-        <li><a class="button  button-prev" href="prev">Назад</a></li>
+        <li><a class="button  button-prev disabled" href="prev">Назад</a></li>
         <li class="current-page"><a class="button  button-page-number" href="1">1</a></li>
         <li><a class="button  button-page-number" href="2">2</a></li>
         <li><a class="button  button-page-number" href="3">3</a></li>
@@ -326,8 +327,6 @@
       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTLM Academy</a> © 2019</p>
     </div>
   </footer>
-
-
 </div>
 </body>
 </html>
