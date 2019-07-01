@@ -12,7 +12,8 @@ body {
 .container {
  background: rgba(0, 0, 255,0.3);
 }
-
+*/
+/*
 .pixelperfect.index-page {
   margin: 0 auto;
   padding: 0;
@@ -274,7 +275,20 @@ img {
 
 .submenu li:first-child {
     font-weight: bold;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    background-position: 6px 36px;
+    background-repeat: no-repeat;
+    background-size: 128px 1px;
 }
+
+.submenu li:first-child a { 
+    line-height: 37px;
+}
+
+.submenu li:nth-child(2) a {
+    line-height: 37px;
+}
+
 
 /*-------------------submenu-end-------------------------------*/
 /*-------------------user-menu---------------------------------*/
@@ -465,18 +479,33 @@ img {
 .filters-select {
     display: block;
     width: 194px;
-    vertical-align: top;
-    padding-left: 11px
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 16px;
+    background-image: linear-gradient(60deg, transparent 50%, white 50%),
+                      linear-gradient(-60deg, transparent 50%, white 50%);
+
+    background-repeat: no-repeat;
+    background-position: 165px center,
+                         170px center;
+    background-size: 5px 10px;
+}
+
+.filters-select ::-ms-expand {
+	display: none;
 }
 
 .filters-select:hover {
     color: black;
+    background-image: linear-gradient(60deg, transparent 50%, black 50%),                      linear-gradient(-60deg, transparent 50%, black 50%);
 }
 
-.filters-select:active {
+.filters-select option {
     background-color: white;
-    font-size: 14px;
     line-height: 16px;
+    height: 20px;
+    font-size: 14px;
 }
 
 .filters-price {
@@ -512,7 +541,7 @@ img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 8px solid rgb(248, 247, 244);
+    border: 7px solid rgb(248, 247, 244);
 }
 
 .filters-price-toggle.toggle-max {
@@ -658,7 +687,7 @@ img {
 }
 
 #btn-1:checked ~ .slider-background {
-    background-color: #849d8f; 
+    background-color: #849d8f;
 }
 
 #btn-2:checked ~ .slider-background{
@@ -666,7 +695,7 @@ img {
 }
 
 #btn-3:checked ~ .slider-background {
-    background-color: #9d8b84; 
+    background-color: #9d8b84;
 }
 
 
@@ -793,7 +822,7 @@ img {
     box-sizing: border-box;
     display: block;
     width: 560px;
-    height: 229px;
+    min-height: 229px;
     border-radius: 20px;
     padding-left: 18px;
     padding-top: 14px;
@@ -876,12 +905,12 @@ img {
     background-repeat: no-repeat;
 }
 
-.catalog img {
+.catalog-product img {
     z-index: 2;
     border-radius: 50%;
 }
 
-.catalog h3 {
+.catalog-product h3 {
     width: 258px;
     font-size: 16px;
     z-index: 4;
@@ -896,6 +925,7 @@ img {
 
 .catalog-product::after {
     display: none;
+    opacity: 0;
     content: "";
     position: absolute;
     top: -6px;
@@ -907,13 +937,18 @@ img {
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: rgba(248, 247, 244, 0.2);
 }
-.catalog-product:hover::after,
-.catalog-product:focus::after {
+
+.catalog-product:hover::after {
+    opacity: 1;
     display: block;
 }
 
-.catalog-product:focus-within::after {
+.catalog-product:focus-within::after,
+.catalog-product:focus-within .red-button  {
     display: block;
+    opacity: 1;
+    pointer-events: all;
+    z-index: 4;
 }
 
 .catalog .red-button {
@@ -930,8 +965,7 @@ img {
     order: 4;
 }
 
-.catalog-product:hover .red-button,
-.catalog-product .red-button:focus {
+.catalog-product:hover .red-button {
     opacity: 1;
     pointer-events: all;
     z-index: 4;
@@ -980,20 +1014,20 @@ img {
     border-radius: 50%;
 }
 
-.paginator a[href]:hover, 
+.paginator a[href]:hover,
 .paginator a[href]:focus {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
 
-.paginator .button-prev:hover, 
-.paginator .button-prev:focus, 
+.paginator .button-prev:hover,
+.paginator .button-prev:focus,
 .paginator .button-next:hover,
 .paginator .button-next:focus {
     background-color: transparent;
 }
 
-.paginator .button-prev, 
+.paginator .button-prev,
 .paginator .button-next {
     text-indent: -200px;
     overflow: hidden;
@@ -1008,7 +1042,7 @@ img {
     margin-left: 0;
 }
 
-.paginator .button-prev::before, 
+.paginator .button-prev::before,
 .paginator .button-next::before {
     position: absolute;
     content: "";
@@ -1031,8 +1065,8 @@ img {
     right: 2px;
 }
 
-.paginator a.disabled, 
-.paginator a.disabled:hover, 
+.paginator a.disabled,
+.paginator a.disabled:hover,
 .paginator a.disabled:focus {
     opacity: 0.4;
     background-color: transparent;
@@ -1142,7 +1176,7 @@ img {
     display: block;
     box-sizing: border-box;
     width: 560px;
-    height: 220px;
+    min-height: 220px;
     padding-left: 19px;
     padding-top: 23px;
     background-color: white;
@@ -1179,7 +1213,7 @@ img {
     box-sizing: border-box;
     align-items: center;
     width: 560px;
-    height: 220px;
+    min-height: 220px;
     background-image: url(../img/bg-post-pattern.svg);
 }
 
@@ -1192,7 +1226,7 @@ img {
     box-sizing: border-box;
     border-radius: 15px;
     width: 549px;
-    height: 211px;
+    min-height: 211px;
     margin: 0 auto;
     background-color: white;
     padding-left: 20px;
@@ -1232,24 +1266,18 @@ img {
     margin-top: 40px;
 }
 
+.yandex-map {
+    position: absolute;
+    z-index: 2;
+
+}
+
 .contacts-map {
     position: absolute;
     z-index: 1;
     top: 0;
     left: 50%;
     margin-left: -600px;
-}
-
-.contacts-map::after {
-    position: absolute;
-    z-index: 4;
-    top: 100px;
-    left: 100px;
-    display: block;
-    content: "";
-    width: 80px;
-    height: 140px;
-    background-image: url(../img/pointer.svg);
 }
 
 .contacts .container {
@@ -1259,7 +1287,7 @@ img {
 
 .contacts-card {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     box-sizing: border-box;
     color: black;
     font-size: 14px;
@@ -1423,48 +1451,6 @@ footer .copyright {
 }
 
 /*----------footer-end--------------------------------------------------         ---------------------------------------------------*/
-/*--------------modal-forms-------------------------------------------------*/
-.feedback-form {
-    display: none;
-    width: 478px;
-    padding: 20px 26px 27px 24px;
-    position: relative;
-    font-size: 16px;
-}
-
-.feedback-form h3 {
-    color: black;
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0;
-}
-
-.feedback-form .close-form-button {
-    position: absolute;
-    border: 0;
-    right: 26px;
-    top: 5px;
-    display: block;
-    width: 18px;
-    height: 17px;
-    background-image: url(../img/btn-cross-big.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: transparent;
-}
-
-.feedback-form input {
-    width: 267px;
-    margin-top: 20px;
-}
-
-.feedback-form textarea {
-    width: 428px;
-    height: 155px;
-    margin-top: 20px;
-}
-
-/*------------------------------modal-forms-end-----------------------*/
 /*-----------------header-forms---------------------------------------------*/
 .forms {
     margin-top: 100px;
@@ -1653,3 +1639,72 @@ footer .copyright {
 }
 
 /*----------------------------header-forms-end-------------------------*/
+/*--------------modal-forms-------------------------------------------------*/
+@keyframes bounce {
+    0% { transform: translateY(-2000px);}
+    70% {transform: translateY(30px);}
+    99% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+.feedback-form.modal-show {
+    display: flex;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+
+.feedback-form {
+    display: none;
+}
+
+.feedback-form {
+    position: fixed;
+    top: 337px;
+    left: 50%;
+    margin-left: -239px;
+    z-index: 8;
+    flex-wrap: wrap;
+    width: 478px;
+    padding: 20px 26px 27px 24px;  
+    font-size: 16px;
+}
+
+.feedback-form h3 {
+    color: black;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+}
+
+.feedback-form .modal-close {
+    position: absolute;
+    border: 0;
+    right: 17px;
+    top: 16px;
+    display: block;
+    width: 18px;
+    height: 17px;
+    background-image: url(../img/btn-cross-big.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+}
+
+.feedback-form input {
+    width: 267px;
+    margin-top: 20px;
+}
+
+.feedback-form textarea {
+    width: 428px;
+    height: 155px;
+    margin-top: 20px;
+}
+
+.feedback-form .submit {
+    margin-top: 25px;
+    margin-left: auto;
+}
+
+
+/*------------------------------modal-forms-end-----------------------*/
