@@ -1631,16 +1631,18 @@ footer .copyright {
 /*----------------------------header-forms-end-------------------------*/
 /*--------------modal-forms-------------------------------------------------*/
 @keyframes bounce {
-    0% { transform: translateY(-50%, -2000%);}
-    70% {transform: translateY(-50%, 10%);}
-    99% {transform: translateY(-50%, -5%);}
-    100% {transform: translateY(-50%, 0);}
+    0% { transform: translateY(-2000%);}
+    70% {transform: translateY(-50%);}
+    70% {transform: translateY(1%);}
+    99% {transform: translateY(-50%);}
+    99% {transform: translateY(-1%);}
+    100% {transform: translateY(0);}
 }
 
 .feedback-form.modal-show {
     display: flex;
     animation-name: bounce;
-    animation-duration: 5s;
+    animation-duration: 0.6s;
 }
 
 .feedback-form {
