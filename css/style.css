@@ -1640,7 +1640,7 @@ footer .copyright {
 .feedback-form {
     flex-wrap: wrap;
     width: 478px;
-    padding: 20px 26px 27px 24px;
+    padding: 20px 26px 26px 24px;
     font-size: 16px;
     transform: translateY(-150vh);
     position: fixed;
