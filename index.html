@@ -5,21 +5,21 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="index-page">
     <input class="slide-radio visually-hidden" type="radio" id="btn-1" name="toggle" checked>
     <input class="slide-radio visually-hidden" type="radio" id="btn-2" name="toggle">
     <input class="slide-radio visually-hidden" type="radio" id="btn-3" name="toggle">
 
-    <div class="pixelperfect slider-background index-page">
+    <div class="slider-background index-page">
       <header class="main-header container">
         <div class="header-top">
           <a aria-label="GllacyShop"><img class="logo" src="img/logo-gllacy.svg" width="154" height="64" alt="GllacyShop"></a>
           <nav class="main-navigation">
             <ul class="main-navigation-list">
               <li class="main-navigation-item">
-                <a class="underline"  href="#"><span class="underline">Каталог</span></a>
+                <a class="underline"  href="#"><span class="underline-only-normal">Каталог</span></a>
                 <ul class="submenu">
                   <li><a href="#">Новинки</a></li>
                   <li><a href="catalog.html">Сливочное</a></li>
@@ -29,10 +29,10 @@
                 </ul>
               </li>
               <li class="main-navigation-item" >
-                <a class="underline button delivery-button" href=""><span class="underline">Доставка и оплата</span></a>
+                <a class="underline button delivery-button" href=""><span class="underline-only-normal">Доставка и оплата</span></a>
               </li>
               <li class="main-navigation-item">
-                <a class="underline button about-us-button" href=""><span class="underline">О Компании</span></a>
+                <a class="underline button about-us-button" href=""><span class="underline-only-normal">О Компании</span></a>
               </li>
             </ul>
           </nav>
@@ -65,8 +65,8 @@
                 <input class="password" type="password" name="password" id="password" placeholder="Пароль" required>
                 <button class="button red-button" type="submit">Войти</button>
                 <div class="login-links-wrapper">
-                  <a class="i-forget-password underline underline-black" href="forget-password.html"><span class="underline">Забыли пароль?</span></a>
-                  <a class="new-registration underline underline-black" href="new-registration.html"><span class="underline">Новая регистрация</span></a>
+                  <a class="i-forget-password underline" href="forget-password.html"><span class="underline-black">Забыли пароль?</span></a>
+                  <a class="new-registration underline" href="new-registration.html"><span class="underline-black">Новая регистрация</span></a>
                 </div>
               </form>
             </li>
@@ -129,12 +129,12 @@
               <li class="bonus-offer-item bonus-offer-item1">
                 <h3>Малинка даром!</h3>
                 <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                <a class="button purchase-button red-button" href="">Хочу варенье!</a><!--Исправить-->
+                <a class="button purchase-button red-button" href="">Хочу варенье!</a>
               </li>
               <li class="bonus-offer-item bonus-offer-item2">
                 <h3>Шоколадки даром!</h3>
                 <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                <a class="button purchase-button red-button" href="">Хочу шоколадки!</a><!--Исправить-->
+                <a class="button purchase-button red-button" href="">Хочу шоколадки!</a>
               </li>
             </ul>
         </section>
@@ -215,7 +215,7 @@
         <div class="news-subscription container">
           <article class="blog-news">
             <h2>Новое в нашем блоге</h2>
-            <h3><a class="underline underline-black" href=""><span class="underline">10 способов сервировки фруктовых щербетов к столу</span></a></h3>
+            <h3><a class="underline underline" href=""><span class="underline-black">10 способов сервировки фруктовых щербетов к столу</span></a></h3>
           </article>
           <section class="subscription">
             <h2 class="visually-hidden">Форма для подписки на новости</h2>
@@ -232,7 +232,7 @@
         </div>
         <section class="contacts">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae701e40fd2726af44ea99c52d992343ca4b0491d03688eb8a04196adec850fb0&amp;source=constructor" width="100%" height="430" frameborder="0"></iframe>
+          <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae701e40fd2726af44ea99c52d992343ca4b0491d03688eb8a04196adec850fb0&amp;source=constructor" width="1200" height="430"></iframe>
           <img class="contacts-map" src="img/map.jpg" alt="Карта с местоположением Google" width="1200" height="430">
           <div class="container">
             <div class="contacts-card">
@@ -255,17 +255,17 @@
         </ul>
         <nav class="about-us-navigation">
           <ul class="about-us-list column">
-            <li class="underline about-us-item for-suppliers"><a href=""><span class="underline"><b>Для поставщиков</b></span></a></li>
-            <li class="underline about-us-item"><a href=""><span class="underline">О производстве</span></a></li>
+            <li class="about-us-item for-suppliers"><a  class="underline" href=""><span class="underline"><b>Для поставщиков</b></span></a></li>
+            <li class="about-us-item"><a class="underline" href=""><span class="underline">О производстве</span></a></li>
           </ul>
           <ul class="about-us-list column">
-            <li class="underline about-us-item"><a href=""><span class="underline">Наши документы</span></a></li>
-            <li class="underline about-us-item"><a href=""><span class="underline">Экологические стандарты</span></a></li>
+            <li class="about-us-item"><a class="underline" href=""><span class="underline">Наши документы</span></a></li>
+            <li class="about-us-item"><a class="underline" href=""><span class="underline">Экологические стандарты</span></a></li>
           </ul>
         </nav>
         <div class="htmlacademy-wrapper">
           <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="htmlacademy logo" width="108" height="39"></a>
-          <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTLM Academy</a> © 2019</p>
+          <p class="copyright">Сделано в <a class="underline" href="https://htmlacademy.ru/intensive/htmlcss"><span class="underline">HTLM Academy</span></a> © 2019</p>
         </div>
       </footer>
       <section class="modal">
@@ -284,6 +284,6 @@
         </form>
       </section>
     </div>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>

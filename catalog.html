@@ -9,14 +9,14 @@
   </head>
 
 <body  class="catalog-page">
-  <div class="pixelperfect inner-background">
+  <div class="inner-background">
     <header class="main-header container">
       <div class="header-top">
         <a aria-label="GllacyShop" href="index.html"><img class="logo" src="img/logo-gllacy.svg" width="154" height="64" alt="GllacyShop"></a>
         <nav class="main-navigation">
           <ul class="main-navigation-list">
             <li class="main-navigation-item">
-            <a class="underline main-navigation-current" href="catalog"><span class="underline">Каталог</span></a>
+            <a class="no-underline main-navigation-current" href="catalog"><span class="underline-only-normal">Каталог</span></a>
             <ul class="submenu">
               <li><a href="">Новинки</a></li>
               <li class="submenu-current"><a href="catalog.html">Сливочное</a></li>
@@ -26,10 +26,10 @@
             </ul>
           </li>
             <li class="main-navigation-item">
-              <a class="underline button delivery-button" href=""><span class="underline">Доставка и оплата</span></a>
+              <a class="underline button delivery-button" href=""><span class="underline-only-normal">Доставка и оплата</span></a>
             </li>
               <li class="main-navigation-item">
-              <a class="underline button about-us-button" href=""><span class="underline">О Компании</span></a>
+              <a class="underline button about-us-button" href=""><span class="underline-only-normal">О Компании</span></a>
             </li>
           </ul>
         </nav>
@@ -62,8 +62,8 @@
               <input class="password" type="password" name="password" id="password" placeholder="Пароль" required>
               <button class="button red-button" type="submit">Войти</button>
               <div class="login-links-wrapper">
-                <a class="i-forget-password underline underline-black" href="forget-password.html"><span class="underline">Забыли пароль?</span></a>
-                <a class="new-registration underline underline-black" href="new-registration.html"><span class="underline">Новая регистрация</span></a>
+                <a class="i-forget-password underline" href="forget-password.html"><span class="underline-black">Забыли пароль?</span></a>
+                <a class="new-registration underline" href="new-registration.html"><span class="underline-black">Новая регистрация</span></a>
               </div>
             </form>
           </li>
@@ -139,8 +139,8 @@
                 <input type="hidden" name="min-price" value="100">
                 <input type="hidden" name="max-price" value="500">
                 <div class="filters-price-range"></div>
-                <div class="filters-price-toggle toggle-min" tabindex="0" aria-label="Тумблер минимальной цены"></div>
-                <div class="filters-price-toggle toggle-max" tabindex="0" aria-label="Тумблер максимальной цены"></div>
+                <div class="filters-price-toggle toggle-min" tabindex="0" aria-label="Минимальная цена"></div>
+                <div class="filters-price-toggle toggle-max" tabindex="0" aria-label="Максимальная цена"></div>
               </div>
             </div>
           </div>
@@ -254,7 +254,7 @@
           </li>
           <li class="catalog-item">
             <article class="catalog-product">
-              <h3><a class="underline" href=""><span class="underline">Сливочное с шоколадной стружкой</a></h3>
+              <h3><a class="underline" href=""><span class="underline">Сливочное с шоколадной стружкой</span></a></h3>
               <img src="img/product-crm-chocolate-chips.jpg" alt="Сливочное с шоколадной стружкой">
               <p class="price">320₽<span class="measure">/кг</span></p>
               <a class="button red-button quick-view-button" href="">Быстрый просмотр</a><!--Исправить-->
@@ -313,17 +313,17 @@
       </ul>
       <nav class="about-us-navigation">
         <ul class="about-us-list column">
-          <li class="underline about-us-item for-suppliers"><a href=""><span class="underline"><b>Для поставщиков</b></span></a></li>
-          <li class="underline about-us-item"><a href=""><span class="underline">О производстве</span></a></li>
+          <li class="about-us-item for-suppliers"><a  class="underline" href=""><span class="underline"><b>Для поставщиков</b></span></a></li>
+          <li class="about-us-item"><a class="underline" href=""><span class="underline">О производстве</span></a></li>
         </ul>
         <ul class="about-us-list column">
-          <li class="underline about-us-item"><a href=""><span class="underline">Наши документы</span></a></li>
-          <li class="underline about-us-item"><a href=""><span class="underline">Экологические стандарты</span></a></li>
+          <li class="about-us-item"><a class="underline" href=""><span class="underline">Наши документы</span></a></li>
+          <li class="about-us-item"><a class="underline" href=""><span class="underline">Экологические стандарты</span></a></li>
         </ul>
       </nav>
       <div class="htmlacademy-wrapper">
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="htmlacademy logo" width="108" height="39"></a>
-        <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTLM Academy</a> © 2019</p>
+        <p class="copyright">Сделано в <a class="underline" href="https://htmlacademy.ru/intensive/htmlcss"><span class="underline">HTLM Academy</span></a> © 2019</p>
       </div>
     </footer>
   </div>
